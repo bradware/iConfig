@@ -19,30 +19,42 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                 $scope.getAssets = function () {
                     $scope.data.assets = $scope.assetResource.query(function() {
                         $scope.totalAssets = $scope.data.assets.length;
-                        $scope.rowLimit = 12;
+                        $scope.rowLimit = 100;
                     });
                 };
 
                 $scope.deleteAsset = function (asset) {
                     asset.$delete().then(function() {
                         $scope.data.assets.splice($scope.data.assets.indexOf(asset), 1);
+                        $scope.totalAssets -= 1;
                     });
                 };
 
                 $scope.saveAsset = function (asset) {
                     asset.$update();
-                    $scope.editAsset = false;
+                };
+
+                $scope.isEmpty = function (obj) {
+                    return Object.keys(obj).length === 0;
                 };
 
                 $scope.createNewAsset = function(newAsset, newValue) {
-                    //newAsset.values = [newValue];
-                    var newAsset2 = new $scope.assetResource(newAsset);
-                    newAsset2.$create().then(function(asset) {
-                        $scope.data.assets.push(asset);
-                        $scope.createAssetBool = false;
-                        $scope.addValueBool = false;
-                    });
-                   
+                    console.log(newValue);
+                    if(!$scope.isEmpty(newValue)) {
+                        newAsset.values = [newValue];
+                    }
+                    if($scope.isEmpty(newAsset)) {
+                        $scope.resetNewAsset(newAsset, newValue);
+                    } else {
+                        new $scope.assetResource(newAsset).$create().then(function(asset) {
+                            $scope.data.assets.push(asset);
+                            $scope.createAssetBool = false;
+                            $scope.addValueBool = false;
+                            $scope.totalAssets += 1;
+                            for (var member in $scope.newAsset) delete $scope.newAsset[member];
+                            for (var valMember in $scope.newValue) delete $scope.newValue[valMember];
+                        });
+                    }
                 };
 
                 $scope.resetNewAsset = function(newAsset, newValue) {

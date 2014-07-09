@@ -22,7 +22,6 @@ router.route('/:app_id/assets')
 	})
 	.post(function(req, res, next) {
 		console.log('Using POST');
-		console.log(req.body);
 		var newAsset = new Asset();
 		newAsset.name = req.body.name;
 		newAsset.status = req.body.status;
@@ -31,7 +30,11 @@ router.route('/:app_id/assets')
 			newAsset.tags = [ ];
 		} 
 		else {
-			newAsset.tags = req.body.tags;
+			if(req.body.tags instanceof Array) {
+                  req.body.tags = req.body.tags.join();
+            }
+			var newTags = req.body.tags.split(',');
+			newAsset.tags = newTags;
 		}
 		newAsset.project_id = req.body.project_id;
 		newAsset.created_by = req.body.created_by;
@@ -41,7 +44,7 @@ router.route('/:app_id/assets')
 		} else {
 			newAsset.values = req.body.values;
 		}
-			
+
 		newAsset.save(function(err) {
 			if(err) {
 				res.send(err);
