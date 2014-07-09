@@ -1,0 +1,10 @@
+.header {
+
+}
+
+#table2 {
+	margin-left: 5;
+	width: 80%;
+	height: 480px;
+	overflow-y: scroll;
+}

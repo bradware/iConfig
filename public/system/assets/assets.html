@@ -1,0 +1,65 @@
+<html ng-app="assetsMod">
+<div class="header">
+    <h1 align="center">Workspace</h1>
+    <h1 align="right"><a href="#/apps">Go back Home</a></h1>
+</div>
+
+<div ng-controller="assetsCtrl" class="body">
+    <input type="text" ng-model="filteredText" placeholder="Search"/>
+    <input type="text" ng-model="rowLimit" placeholder="Rows per Page"/>
+
+    <button class="btn btn-primary btn-sm" ng-click="createAssetBool = true">New Asset</button>
+    <form ng-show="createAssetBool" novalidate class="simple-form" ng-model="newAsset">
+        Asset Name: <input type="text" ng-model="newAsset.name" /><br/>
+        Asset Status: <input type="radio" ng-model="asset.status" value="Not Translated" /> Not Translated
+                          <input type="radio" ng-model="newAsset.status" value="Translated" /> Translated
+                          <input type="radio" ng-model="newAsset.status" value="In Progress" /> In Progress<br/>
+        Asset Tags: <input type="text" ng-model="newAsset.tags"/><br/>
+        Created By: <input type="text" ng-model="newAsset.created_by"/><br/>
+        <button type="button" class="btn btn-info btn-sm" ng-click="addValueBool = true">Add Value</button></br>
+        <div ng-show="addValueBool" ng-model="newValue"></br>
+            Value String: <input type="text" ng-model="newValue.name"/><br/>
+            Value Status: <input type="radio" ng-model="newValue.status" value="Not Translated" /> Not Translated
+                            <input type="radio" ng-model="newValue.status" value="Translated" /> Translated
+                            <input type="radio" ng-model="newValue.status" value="In Progress" /> In Progress<br/>
+            Locale Code:  <input type="text" ng-model="newValue.locale_code"/><br/>
+            Created By:   <input type="text" ng-model="newValue.created_by"/> <br/>                
+        </div>
+        <button class="btn btn-primary btn-sm" ng-click="createNewAsset(newAsset, newValue)">Save</button>
+        <button class="btn btn-danger btn-sm" ng-click="resetNewAsset(newAsset)">Cancel</button><br/>
+
+    </form>
+    <!--This is the table content body that is displayed to the user-->
+    <table id="table2" ng-table="tableParams" class="table table-bordered">
+        <tr ng-repeat="asset in data.assets | filter:filteredText | limitTo:rowLimit">
+
+            <td data-title="'Key'" >
+                <span ng-show="!editAsset">{{asset.name}}</span>
+                <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
+            </td>
+
+            <td data-title="'Status'" >
+                <span ng-show="!editAsset">{{asset.status}}</span>
+                <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.status" /></div>
+            </td>
+
+            <td data-title="'Strings'" ng-repeat="value in asset.values">
+                <span ng-show="!editAsset">{{value.string}}</span>
+                <div ng-show="editAsset"><input class="form-control" type="text" ng-model="value.string" /></div>
+            </td>
+
+            <td data-title="'Tags'">
+                <span ng-show="!editAsset">{{asset.tags}}</span>
+                <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.tags"/></div>
+            </td>
+
+            <td data-title="'Actions'">
+                <button class="btn btn-xs btn-danger" ng-click="deleteAsset(asset)">Delete</button>
+                <a ng-show="!editAsset" href="" class="btn btn-default btn-xs" ng-click="editAsset=true">Edit</a>
+                <a ng-show="editAsset" href="" class="btn btn-default btn-xs" ng-click="saveAsset(asset)">Save</a>
+            </td>
+
+        </tr>
+    </table>
+</div>
+</html>
