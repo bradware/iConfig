@@ -117,25 +117,36 @@ module.exports = function(grunt) {
               }
             },
             all: ['spec/']
+        },
+	shell: {
+            mongodb: {
+                command: 'mongod --dbpath ./data/db',
+                options: {
+                    async: true,
+                    stdout: false,
+                    stderr: true,
+                    failOnError: true,
+                    execOptions: {
+                        cwd: '.'
+                    }
+                }
+            }
         }
     });
 
     //Load NPM tasks
     require('load-grunt-tasks')(grunt);
-    grunt.loadNpmTasks('grunt-jasmine-node');
 
     //Default task(s).
     if (process.env.NODE_ENV === 'production') {
         grunt.registerTask('default', ['clean','cssmin', 'uglify', 'concurrent']);
     } else {
-        grunt.registerTask('default', ['clean', 'jshint', 'csslint', 'concurrent', 'jasmine_node']);
-        //grunt.registerTask('default', ['clean', 'csslint', 'concurrent', 'jasmine_node']);
+        grunt.loadNpmTasks('grunt-jasmine-node');
+        grunt.loadNpmTasks('grunt-shell-spawn');
+        grunt.registerTask('default', ['shell:mongodb', 'clean', 'jshint', 'csslint', 'concurrent', 'jasmine_node']);
     }
 
     //Test task.
     grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
 
-    // For Heroku users only.
-    // Docs: https://github.com/linnovate/mean/wiki/Deploying-on-Heroku
-    grunt.registerTask('heroku:production', ['cssmin', 'uglify']);
 };
