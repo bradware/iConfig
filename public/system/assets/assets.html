@@ -8,26 +8,25 @@
     <input type="text" ng-model="filteredText" placeholder="Search"/>
     <input type="text" ng-model="rowLimit" placeholder="Rows per Page"/>
 
-    <button class="btn btn-primary btn-sm" ng-click="createAssetBool = true">New Asset</button>
+    <button class="btn btn-primary btn-sm" ng-click="createAssetBool = true; newAsset.status = 'Not Translated'">New Asset</button>
     <form id="newAsset" ng-show="createAssetBool" novalidate class="simple-form" ng-model="newAsset">
         Asset Name: <input type="text" ng-model="newAsset.name" required/><br/>
-        Asset Status: <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Not Translated"/> Not Translated
-                          <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Translated" /> Translated
-                          <input type="radio" ng-model="newAsset.status" name="assetstatus" value="In Progress"/> In Progress<br/>
+        Asset Status: <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Not Translated" checked="true"/> Not Translated
+                    <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Translated" /> Translated
+                    <input type="radio" ng-model="newAsset.status" name="assetstatus" value="In Progress"/> In Progress<br/>
         Asset Tags: <input type="text" ng-model="newAsset.tags"/><br/>
         Created By: <input type="text" ng-model="newAsset.created_by"/><br/>
-        <button type="button" class="btn btn-info btn-sm" ng-click="addValueBool = true">Add Value</button></br>
+        <button type="button" class="btn btn-info btn-sm" ng-click="addValueBool = true; newValue.status = 'Not Translated'">Add Value</button></br>
         <div id="newValue" ng-show="addValueBool" ng-model="newValue"></br>
             Value String: <input type="text" ng-model="newValue.string"/><br/>
-            Value Status: <input type="radio" ng-model="newValue.status" name="valuestatus" value="Not Translated"/> Not Translated
+            Value Status: <input type="radio" ng-model="newValue.status" name="valuestatus" value="Not Translated" checked="true"/> Not Translated
                             <input type="radio" ng-model="newValue.status" name="valuestatus" value="Translated"/> Translated
                             <input type="radio" ng-model="newValue.status" name="valuestatus" value="In Progress"/> In Progress<br/>
             Locale Code:  <input type="text" ng-model="newValue.locale_code"/><br/>
             Created By:   <input type="text" ng-model="newValue.created_by"/> <br/>                
         </div>
-        <button class="btn btn-primary btn-sm" ng-click="createNewAsset(newAsset, newValue)">Save</button>
+        <button class="btn btn-primary btn-sm" ng-disabled="!validAsset(newAsset) || !validValue(newValue)" ng-click="createNewAsset(newAsset, newValue)">Save</button>
         <button class="btn btn-danger btn-sm"  ng-click="resetNewAsset(newAsset)">Cancel</button><br/>
-
     </form>
     <!--This is the table content body that is displayed to the user-->
     <table id="table2" ng-table="tableParams" class="table table-bordered">

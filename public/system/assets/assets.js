@@ -38,6 +38,33 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                     return Object.keys(obj).length === 0;
                 };
 
+                $scope.validAsset = function(newAsset) {
+                    if($scope.newAsset) {
+                        if($scope.newAsset.name && $scope.newAsset.name.length !== 0 && $scope.newAsset.status && 
+                            $scope.newAsset.status.length !== 0 && $scope.newAsset.created_by && 
+                                $scope.newAsset.created_by.length !== 0) {
+                                    return true;
+                        }
+                    }
+                    return false;
+                };
+
+                $scope.validValue = function(newValue) {
+                    if($scope.addValueBool) {
+                        if($scope.newValue) {
+                            if($scope.newValue.string && $scope.newValue.string.length !== 0 && $scope.newValue.status && 
+                                $scope.newValue.status.length !== 0 && $scope.newValue.created_by && 
+                                    $scope.newValue.created_by.length !== 0 && $scope.newValue.locale_code && 
+                                    $scope.newValue.locale_code.length !== 0) {
+                                        return true;
+                            } else {
+                                return false;
+                            }
+                        }
+                    }
+                    return true;
+                };
+
                 $scope.createNewAsset = function(newAsset, newValue) {
                     console.log(newValue);
                     if(!$scope.isEmpty(newValue)) {
