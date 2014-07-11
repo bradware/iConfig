@@ -1,8 +1,22 @@
-<html ng-app="assetsMod">
-<div class="header">
-    <h1 align="center">Workspace</h1>
-    <h1 align="right"><a href="#/apps">Go back Home</a></h1>
+<div ng-app="assetsMod">
+
+<div class="assetToolbar">
+    <ul id="nav">
+        <li><img src="/assetLib/img/icons/Usericon.icns" id="userIcon"></li>
+        <li><img src="/assetLib/img/icons/Help.png" id="helpIcon"></li>
+        <li class="textNav">Mark As</li>
+        <li class="textNav">Display</li> 
+        <li class="textNav">Translation Status</li> 
+    </ul>
+
+    <span id="navCenter">
+        <img src="/assetLib/img/icons/AppleObsidian.png">
+         iConfigurator2.0
+    </span>
 </div>
+    
+<h1 align="right"><a href="#/apps">Go back Home</a></h1>
+
 
 <div ng-controller="assetsCtrl" class="body">
     <input type="text" ng-model="filteredText" placeholder="Search"/>
@@ -29,30 +43,38 @@
         <button class="btn btn-danger btn-sm"  ng-click="resetNewAsset(newAsset)">Cancel</button><br/>
     </form>
     <!--This is the table content body that is displayed to the user-->
-    <table id="table2" ng-table="tableParams" class="table table-bordered">
+    <div class="tableToolbar">
+
+
+
+
+    </div>
+    <table id="table1" ng-table="tableParams" class="table table-bordered">
         <tr ng-repeat="asset in data.assets | filter:filteredText | limitTo:rowLimit">
 
-            <td data-title="'Key'" >
+            <td  class="tableCell" data-title="'Key'">
                 <span ng-show="!editAsset">{{asset.name}}</span>
                 <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
             </td>
 
-            <td data-title="'Status'" >
+            <td class="tableCell" data-title="'Status'" >
                 <span ng-show="!editAsset">{{asset.status}}</span>
                 <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.status" /></div>
             </td>
 
-            <td data-title="'Strings'" ng-repeat="value in asset.values">
-                <span ng-show="!editAsset">{{value.string}}</span>
-                <div ng-show="editAsset"><input class="form-control" type="text" ng-model="value.string" /></div>
+            <td class="tableCell" data-title="'String'">
+                <div id="valueCell" ng-repeat="value in asset.values">
+                    <span ng-show="!editAsset">{{value.string}}</span>
+                    <div ng-show="editAsset"><input class="form-control" type="text" ng-model="value.string" /></div>
+                </div>
             </td>
 
-            <td data-title="'Tags'">
+            <td class="tableCell" data-title="'Tags'">
                 <span ng-show="!editAsset">{{asset.tags}}</span>
                 <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.tags"/></div>
             </td>
 
-            <td data-title="'Actions'">
+            <td class="tableCell" data-title="'Actions'">
                 <button class="btn btn-xs btn-danger" ng-click="deleteAsset(asset)">Delete</button>
                 <a ng-show="!editAsset" href="" class="btn btn-default btn-xs" ng-click="editAsset=true">Edit</a>
                 <a ng-show="editAsset" href="" class="btn btn-default btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
@@ -61,4 +83,5 @@
         </tr>
     </table>
 </div>
-</html>
+
+</div>
