@@ -9,6 +9,10 @@
 .glyphicon {
 	font-size: 1.6em;
 }
+
+.cellGlyphicon{ 
+	font-size: 1em;
+}
 .assettoolbar {
 	position: fixed;
 	height: 41px;
@@ -61,8 +65,6 @@
 	margin-right: 20px;
 }
 
-
-
 .tableToolbar {
 	position: fixed;
     right: 5%;
@@ -72,24 +74,24 @@
 }
 
 #tableBody {
-	padding-top: 18%;
-}
-
-#appHeader {
-	font-weight: bold;
-	font-size: 1.9em;
-	font-family: 'Myriad Set', sans-serif;
-	font-weight: bold;
+	padding-top: 10%;
 }
 
 #appHeader h3 {
-	margin: 2px;
+	margin-left: 5px;
+	margin-top: 5px;
+	font-size: 225%;
+	font-weight: bold;
+	font-family: 'Myriad Set', sans-serif;
 }
 
 #appHeader img{
 	position: relative;
-	width: 30px;
-	height: 30px;
+	float: right;
+	margin-top: 0;
+	margin-right: 5px;
+	width: 40px;
+	height: 40px;
 }
 
 #tools {
@@ -147,6 +149,11 @@
 	border: none;
 	width: 21px;
 	height: 21px;
+}
+
+#newAsset {
+	position: relative;
+	margin: 10px;
 }
 
 

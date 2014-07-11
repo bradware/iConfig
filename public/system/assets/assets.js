@@ -73,7 +73,7 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                         $scope.resetNewAsset(newAsset, newValue);
                     } else {
                         new $scope.assetResource(newAsset).$create().then(function(asset) {
-                            $scope.data.assets.push(asset);
+                            $scope.data.assets.unshift(asset);
                             $scope.createAssetBool = false;
                             $scope.addValueBool = false;
                             $scope.totalAssets += 1;
