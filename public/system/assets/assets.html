@@ -29,7 +29,7 @@
         <div class="tableToolbar-heading"><h3 class="tableToolBar-title"><img src="assetLib/img/icons/iLog.png">iLog</h3></div>
         <div class="tableToolBar-body">
             <ul>
-                <li><button type="button" class="toolButton" ng-click="createAssetBool = true; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus"></span></button></li>
+                <li><button type="button" class="toolButton" ng-click="createAssetBool = !createAssetBool; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus"></span></button></li>
                 <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-question-sign"></span></button></li>     
                 <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-trash"></span></button></li>
                 <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign blue"></span></button></li>
@@ -40,16 +40,16 @@
                 <li><input class="filters" type="text" ng-show="search" ng-model="filteredText" placeholder="Search"/></li>
                 <li><input class="filters" type="text" ng-show="search" ng-model="rowLimit" placeholder="Rows per Page"/></li>
             </ul>
-            <div id="newAsset" ng-model="newAsset">
-                <form ng-show="createAssetBool" novalidate class="simple-form">
+            <div id="newAsset" ng-model="newAsset" ng-show="createAssetBool">
+                <form class="simple-form">
                     <ul>
-                        <li>Asset Name: <input type="text" ng-model="newAsset.name" required/><br/></li>
+                        <li>Asset Name: <input type="text" ng-model="newAsset.name" required/></li><br/>
                         <li>Asset Status: <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Not Translated" checked="true"/> Not Translated
                                     <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Translated" /> Translated
-                                    <input type="radio" ng-model="newAsset.status" name="assetstatus" value="In Progress"/> In Progress<br/></li>
-                        <li>Asset Tags: <input type="text" ng-model="newAsset.tags"/><br/></li>
-                        <li>Created By: <input type="text" ng-model="newAsset.created_by"/><br/></li>
-                        <li><button type="button" class="btn btn-info btn-xs" ng-click="addValueBool = true; newValue.status = 'Not Translated'">Add Value</button></br></li>
+                                    <input type="radio" ng-model="newAsset.status" name="assetstatus" value="In Progress"/> In Progress</li></br>
+                        <li>Asset Tags: <input type="text" ng-model="newAsset.tags"/></li></br>
+                        <li>Created By: <input type="text" ng-model="newAsset.created_by"/></li>
+                        <li><button type="button" class="btn btn-info btn-xs valButton" ng-click="addValueBool = true; newValue.status = 'Not Translated'">Add Value</button></li></br>
                     </ul>
                 </form>
                 <div id="newValue" ng-model="newValue"> 
