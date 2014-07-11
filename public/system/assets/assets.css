@@ -19,6 +19,7 @@
 	width: 100%;
 	background: white;
 	border-bottom: 2px solid black;
+	z-index: 15;
 }
 
 #navLeft {
@@ -65,42 +66,62 @@
 	margin-right: 20px;
 }
 
-.tableToolbar {
-	position: fixed;
-    right: 5%;
-    left: 5%;
-    top: 15%;
-    background-color: silver;
-}
-
 #tableBody {
 	padding-top: 10%;
 }
 
-#appHeader h3 {
-	margin-left: 5px;
+.tableToolbar {
+	position: fixed;
+    top: 16%;
+    width: 96%;
+    left: 2%;
+    right: 2%;
+    z-index: 9;
+    background-color: #fff;
+}
+
+.tableToolbar-heading  {
+	width: 150px;
+	border-top: 2px solid;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-color: #000 !important;
+	padding-bottom: 0;
+}
+
+.tableToolbar-title {
+	position: relative;
 	margin-top: 5px;
-	font-size: 225%;
+	margin-bottom: 0;
+	font-size: 200%;
 	font-weight: bold;
 	font-family: 'Myriad Set', sans-serif;
 }
 
-#appHeader img{
+.tableToolbar-title img {
 	position: relative;
-	float: right;
-	margin-top: 0;
-	margin-right: 5px;
-	width: 40px;
-	height: 40px;
+	margin: 5px;
+	margin-top: -5px;
+	float: left;
+	width: 35px;
+	height: 35px;
 }
 
-#tools {
-	margin-top: 25px;
+.tableToolbar-body {
+	border: 2px solid;
+	border-color: #000 !important;
+	border
 	padding: 0;
-	list-style: none;
+	margin-top: -5px;
+	height: 40px;
+	float: left;
+	width: 100%;
 }
 
-#tools li {
+.tableToolbar-body li {
+	margin-top: 5px;
+	margin-right: 5px;
+	list-style: none;
 	float: left;
 }
 
@@ -141,7 +162,7 @@
 }
 
 .filters {
-	margin-left: 10px;
+	margin-left: 15px;
 }
 
 #checkBoxButton {
@@ -152,8 +173,20 @@
 }
 
 #newAsset {
-	position: relative;
-	margin: 10px;
+	display: block;
+	margin-left: -2px;
+	margin-right: -2px;
+	border-left: 2px solid;
+	border-bottom: 2px solid;
+	border-right: 2px solid;
+	border-color: #000 !important;
+	background-color: #fff;
+}
+
+#newAsset li {
+	margin-top: 5px;
+	margin-right: 5px;
+	list-style: none;
 }
 
 
