@@ -1,32 +1,31 @@
 <div ng-app="assetsMod">
     <div class="assettoolbar">
-        <ul id="navLeft">
-            <li><span class="glyphicon glyphicon-user"></span></li>
-            <li><span class="glyphicon glyphicon-question-sign blue"></span></li>        
-            <li class="textNav">Mark As</li>
-            <li class="textNav">Display</li> 
-            <li class="textNav">Translation Status</li> 
-        </ul>
-        <span id="navCenter">
-            <img src="/assetLib/img/icons/Workspace.png">
-             Workspace.
-        </span>
-        <ul id="navRight">
-            <li class="textNav">Version</li>
-            <li class="textNav">Application</li> 
-            <li class="textNav">Target Language</li>
-            <li><span class="glyphicon glyphicon-home"></span></li>
-            <li><span class="glyphicon glyphicon-off red"></span></li> 
-        </ul>
+        <div id="navLeft">
+            <p class="navBarLeftItem glyphicon glyphicon-user"></p>
+            <p class="navBarLeftItem glyphicon glyphicon-question-sign blue"></p>       
+            <p class="navBarLeftItem navBarTextItem">Mark As</p>
+            <p class="navBarLeftItem navBarTextItem">Display</p> 
+            <p class="navBarLeftItem navBarTextItem">Translation Status</p> 
+        </div>
+        <div id="navCenter">
+            <p class="navBarCenterItem">
+            <span><img src="/assetLib/img/icons/Workspace.png">Workspace.</span>
+            </p>
+        </div>
+        <div id="navRight">
+            <p class="navBarRightItem"><span class="glyphicon glyphicon-off red"></span></p>
+            <p class="navBarRightItem"><a href="#/apps"><button type="button" class="toolButton black"><span class="glyphicon glyphicon-home"></button></span></a></p>  
+            <p class="navBarRightItem navBarTextItem">Application</p> 
+            <p class="navBarRightItem navBarTextItem">Target Language</p>
+            <p class="navBarRightItem navBarTextItem">Version</p>    
+        </div>
     </div>
-    <!--    
-    <h1 align="right"><a href="#/apps">Go back Home</a></h1>
-    -->
-
     <div ng-controller="assetsCtrl" class="body">
         <div class="tableToolbar">
-            <div class="tableToolbar-heading"><h3 class="tableToolBar-title"><img src="assetLib/img/icons/iLog.png">iLog</h3></div>
-            <div class="tableToolBar-body">
+            <div id="tableToolbar-appName">
+                <h3 class="tableToolBar-title"><img src="assetLib/img/icons/iLog.png">iLog</h3>
+            </div>
+            <div class="tableToolBar-icons">
                     <ul id="toolBarMenu">
                         <li><button type="button" class="toolButton" ng-click="createAssetBool = !createAssetBool; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus"></span></button></li>
                         <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-question-sign blue"></span></button></li>     
@@ -64,7 +63,7 @@
             </div>
         </div>
         <div class="mainTable">
-            <table id="table1" ng-table="tableParams" class="table table-bordered">
+            <table id="table1" ng-table="tableParams" class="table">
                 <tr ng-repeat="asset in data.assets | filter:filteredText | limitTo:rowLimit">
                     <td  class="tableCell" data-title="'Key'">
                     </td>
@@ -83,7 +82,7 @@
                 </tr>
             </table>
 
-             <table id="table2" ng-table="tableParams" class="table table-bordered">
+             <table id="table2" ng-table="tableParams" class="table">
                 <tr ng-repeat="asset in data.assets | filter:filteredText | limitTo:rowLimit">
                     <td  class="tableCell" data-title="'Key'">
                         <span ng-show="!editAsset" class="tableValue">{{asset.name}}</span>
@@ -116,6 +115,12 @@
                     </td>
                 </tr>
             </table>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footerTitle">
+            <img src="/assetLib/img/icons/blackApple.png" class="imgTitle">
+            <p class="footerText">iConfigurator2.0</p>
         </div>
     </div>
 </div>
