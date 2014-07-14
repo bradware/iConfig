@@ -274,11 +274,11 @@
 	border-bottom: 2px solid black;
 	border-top: none;
 	width: 20%;
+	right: -2px;
 }
 
 #table1 {
 	margin-bottom: 0px;
-	right: -2px;
 }
 
 
@@ -288,6 +288,7 @@
 
 #table2 thead {
 	display: none;
+
 }
 
 #table2 tbody{
