@@ -43,10 +43,10 @@
 	-o-align-items: flex-end;
 	align-items: flex-end;
 
-	-webkit-flex-wrap: nowrap;
-	-moz-flex-wrap: nowrap;
-	-ms-flex-wrap: nowrap;
-	-o-flex-wrap: nowrap;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
 	flex-wrap: wrap;
 
 	position: fixed;
@@ -162,11 +162,11 @@
 	-o-align-items: flex-end;
 	align-items: flex-end;
 
-	-webkit-flex-wrap: nowrap;
-	-moz-flex-wrap: nowrap;
-	-ms-flex-wrap: nowrap;
-	-o-flex-wrap: nowrap;
-	flex-wrap: nowrap;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
 
 	position: fixed;
 	top: 65px;
@@ -253,7 +253,6 @@
 }
 
 .mainTable {
-
 	width: 96%;
 	top: 114px;
     left: 2%;
@@ -266,42 +265,29 @@
 
 .tableCell {
 	width: 25%;
+	text-align: center;
 }
 
-#table1 thead {
+#table2 thead {
 	border-left: 2px solid black;
 	border-right: 2px solid black;
 	border-bottom: 2px solid black;
 	border-top: none;
-	width: 20%;
-	right: -2px;
-}
-
-#table1 {
-	margin-bottom: 0px;
-}
-
-
-#table1 tbody {
-	display: none;
-}
-
-#table2 thead {
-	display: none;
-
+	margin-right: -2px;
 }
 
 #table2 tbody{
-	position: absolute;
+	position: fixed;
 	border: 2px solid black;
-	top: 38px;
+	top: 152px;
 	overflow-y: scroll;
 	height: 76.2%;
-	width: 100%;
+	width: 96%;
+	margin-left: -1px;
 }
 
-#table2 td {
-	width: 20%;
+#table2 .icons {
+	width: 160px;
 }
 
 .filters {

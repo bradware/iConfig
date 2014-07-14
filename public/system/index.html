@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/lib/ng-table/ng-table.min.css">
-    <link rel="stylesheet" href="/assets/assets.css">
     <link rel="stylesheet" href="/assetLib/css/index.css">
+    <link rel="stylesheet" href="/assets/assets.css">
     <script src="/lib/angular/angular.min.js"></script>
     <script src="/lib/angular-ui-router/angular-ui-router.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -18,11 +18,57 @@
 </head>
 <body>
     <div ui-view>
-        <div class="title">
-            <span> <h1>iConfigurator2.0 <img src="/assetLib/img/icons/AppleObsidian.png" class="imgTitle"> </h1> </span>
+        <div class="navBar">
+            <div class="profileNavBar">
+                <span class="glyphicon glyphicon-user" style="font-size: 30px"><p>Hello, <u>Brad Ware</u></p></span>
+            </div>
+            <div class="titleNavBar">
+                <h1>iConfigurator2.0</h1>
+            </div>
+            <div class="logout">
+                <span class="glyphicon glyphicon-off red" style="font-size: 30px"></span>
+            </div>
         </div>
-        <div class="Workspace">
-            <a href="#/assets">Workspace.</a>
+        <div class="home">
+            <h2>Home.</h2>
         </div>
+        
+        <div class="Actions">
+            <div class="Workspace">
+                <div class="workspaceTitle">
+                    <span>
+                        <a href="#/assets"><img src="/assetLib/img/icons/Workspace.png"></a>
+                        <h3><a style="color: black" href="#/assets">Workspace.</a></h3>
+                    </span>
+                </div>
+                <div class="clientAppsBody">
+                    <div class="iLog">
+                        <a class="link" href="#/assets">
+                            <span>
+                                <img src="assetLib/img/icons/iLog.png">
+                                <p style="color:black">iLog</p>
+                            </span>
+                        </a>
+                   </div>
+                   <div class="app_1"><span class="glyphicon glyphicon-tree-deciduous">
+                        </span><p>iForest</p>
+                    </div>
+                    <div class="app_2"><span class="glyphicon glyphicon-book">
+                        </span><p>iBook</p>
+                    </div>
+                    <div class="app_3"><span class="glyphicon glyphicon-th-large">
+                        </span><p>iGrid</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Profile">
+                <h3>Change your account settings.</h3>
+                <div class="ProfileButton"><p>Edit</p></div>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="/assetLib/img/icons/blackApple.png">
+        </div>
+    </div>
     </div>
 </body>

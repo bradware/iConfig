@@ -14,12 +14,29 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                 $scope.totalAssets = 0;
                 $scope.createAssetBool = false;
                 $scope.addValueBool = false;
+                $scope.assetList = [ ];
                 
                 $scope.getAssets = function () {
                     $scope.data.assets = $scope.assetResource.query(function() {
                         $scope.totalAssets = $scope.data.assets.length;
                         $scope.rowLimit = 100;
                     });
+                };
+
+                $scope.addAssetToList = function(asset) {
+                    $scope.assetList.unshift(asset);
+                    console.log($scope.assetList);
+                };
+
+                $scope.deleteManyAssets = function() {
+                    if($scope.assetList.length === 0) {
+                        console.log('AssetList is Empty');
+                    } else {
+                        for(var asset in $scope.assetList) {
+                            $scope.deleteAsset(asset);
+                        }
+                    }
+                    $scope.assetList = [ ];
                 };
 
                 $scope.deleteAsset = function (asset) {
