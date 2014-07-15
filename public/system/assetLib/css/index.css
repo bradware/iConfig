@@ -85,9 +85,19 @@
 
     text-align: center;
     vertical-align: center;
-	font-family: 'Myriad Set', sans-serif;
 	margin-top: -10px;
 	margin-left: -40px;
+}
+
+.titleNavBar img {
+	height: 45px;
+	width: 60px;
+}
+
+.titleNavBar h1 {
+	font-family: 'Myriad Set', sans-serif;
+	font-weight: 200;
+	font-color: black;
 }
 
 .logout {
@@ -128,6 +138,7 @@
 	margin-left: 0px;
 	display: inline-block;
 	text-align: left;
+	font-weight: 300;
 }
 
 .workspaceTitle img {
@@ -265,6 +276,10 @@ span.glyphicon-th-large {
 	right: 4%;
 }
 
+.Profile h3 {
+	font-weight: 300;
+}
+
 .ProfileButton{
 	height: 50px;
 	width: 120px;
@@ -319,7 +334,7 @@ span.glyphicon-th-large {
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
-	height: 30px;
+	height: 65px;
 	font-weight: bold;
 	font-size: 1.0em;
 	font-family: 'Myriad Set', sans-serif;
@@ -329,6 +344,7 @@ span.glyphicon-th-large {
 }
 
 .footer img {
-	height: 30px;
-	width: 30px;
+	margin-bottom: 10px;
+	height: 45px;
+	width: 60px;
 }

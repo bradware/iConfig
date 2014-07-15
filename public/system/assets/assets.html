@@ -8,8 +8,8 @@
             <p class="navBarLeftItem navBarTextItem">Translation Status</p> 
         </div>
         <div id="navCenter">
-            <p class="navBarCenterItem">
-            <span><img src="/assetLib/img/icons/Workspace.png">Workspace.</span>
+            <p>
+                <span><img src="/assetLib/img/icons/rainbowApple.png">iConfigurator2.0</span>
             </p>
         </div>
         <div id="navRight">
@@ -20,90 +20,92 @@
             <p class="navBarRightItem navBarTextItem">Version</p>    
         </div>
     </div>
-    <div ng-controller="assetsCtrl" class="body">
-        <div class="tableToolbar">
-            <div id="tableToolbar-appName">
-                <h3 class="tableToolBar-title"><img src="assetLib/img/icons/iLog.png">iLog</h3>
-            </div>
-            <div class="tableToolBar-icons">
-                    <ul id="toolBarMenu">
-                        <li><button type="button" class="toolButton" ng-click="createAssetBool = !createAssetBool; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus"></span></button></li>
-                        <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-question-sign blue"></span></button></li>     
-                        <li><button type="button" class="toolButton" ng-click="deleteManyAssets()"><span class="glyphicon glyphicon-trash red"></span></button></li>
-                        <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign blue"></span></button></li>
-                        <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-upload"></span></button></li>
-                        <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-edit"></span></button></li>      
-                        <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-globe"></span></button></li>
-                        <li><button type="button" class="toolButton" ng-click="search = !search"><span class="glyphicon glyphicon-search"></span></button></li>
-                        <li><input class="filters" type="text" ng-show="search" ng-model="filteredText" placeholder="Search"/></li>
-                        <li><input class="filters" type="text" ng-show="search" ng-model="rowLimit" placeholder="Rows per Page"/></li>
-                    </ul>
-                <div class="newAsset" ng-model="newAsset" ng-show="createAssetBool">
-                        <form class="simple-form newAssetForm">
-                            <div class="formInput">Asset Name: <input type="text" ng-model="newAsset.name" required/></div>
-                            <div class="formInput">Asset Status: <input type="radio" ng-model="newAsset.status" name="assetstatus" value    ="Not Translated" checked="true"/> Not Translated
-                                <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Translated" /> Translated
-                                <input type="radio" ng-model="newAsset.status" name="assetstatus" value="In Progress"/> In Progress</div>
-                            <div class="formInput">Asset Tags: <input type="text" ng-model="newAsset.tags"/></div>
-                            <div class="formInput">Created By: <input type="text" ng-model="newAsset.created_by"/></div>
-                            <div class="formInput"><button type="button" class="btn btn-info btn-xs valButton" ng-click="addValueBool = true; newValue.status = 'Not Translated'">Add Value</button></div>
-                            </ul>
-                        </form>
-                        <form class="simple-form newAssetForm" ng-show="addValueBool">
-                            <div class="formInput">Value String: <input type="text" ng-model="newValue.string"/></div>
-                            <div class="formInput">Value Status: <input type="radio" ng-model="newValue.status" name="valuestatus" value="Not Translated" checked="true"/> Not Translated
-                                            <input type="radio" ng-model="newValue.status" name="valuestatus" value="Translated"/> Translated
-                                            <input type="radio" ng-model="newValue.status" name="valuestatus" value="In Progress"/> In Progress<br/></div>
-                            <div class="formInput">Locale Code:  <input type="text" ng-model="newValue.locale_code"/></div>
-                            <div class="formInput">Created By:   <input type="text" ng-model="newValue.created_by"/></div>
-                        </form>                
-                    <div class="formInputButton"><button ng-show="createAssetBool" class="btn btn-primary btn-xs" ng-disabled="!validAsset(newAsset) || !validValue(newValue)" ng-click="createNewAsset(newAsset, newValue)">Save</button>
-                    <button ng-show="createAssetBool" class="btn btn-danger btn-xs"  ng-click="resetNewAsset(newAsset)">Cancel</button></div>
+    <div ng-controller="assetsCtrl">
+        <body>
+            <div class="tableToolbar">
+                <div id="tableToolbar-appName">
+                    <h3 class="tableToolBar-title"><img src="assetLib/img/icons/iLog.png">iLog</h3>
+                </div>
+                <div class="tableToolBar-icons">
+                        <ul id="toolBarMenu">
+                            <li><button type="button" class="toolButton" ng-click="createAssetBool = !createAssetBool; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus white"></span></button></li>
+                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-question-sign white"></span></button></li>     
+                            <li><button type="button" class="toolButton" ng-click="deleteManyAssets()"><span class="glyphicon glyphicon-trash white"></span></button></li>
+                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign white"></span></button></li>
+                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-upload white"></span></button></li>
+                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-edit white"></span></button></li>      
+                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-globe white"></span></button></li>
+                            <li><button type="button" class="toolButton" ng-click="search = !search"><span class="glyphicon glyphicon-search white"></span></button></li>
+                            <li><input class="filters" type="text" ng-show="search" ng-model="filteredText" placeholder="Search"/></li>
+                            <li><input class="filters" type="text" ng-show="search" ng-model="rowLimit" placeholder="Rows per Page"/></li>
+                        </ul>
+                    <div class="newAsset" ng-model="newAsset" ng-show="createAssetBool">
+                            <form class="simple-form newAssetForm">
+                                <div class="formInput">Asset Name: <input type="text" ng-model="newAsset.name" required/></div>
+                                <div class="formInput">Asset Status: <input type="radio" ng-model="newAsset.status" name="assetstatus" value    ="Not Translated" checked="true"/> Not Translated
+                                    <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Translated" /> Translated
+                                    <input type="radio" ng-model="newAsset.status" name="assetstatus" value="In Progress"/> In Progress</div>
+                                <div class="formInput">Asset Tags: <input type="text" ng-model="newAsset.tags"/></div>
+                                <div class="formInput">Created By: <input type="text" ng-model="newAsset.created_by"/></div>
+                                <div class="formInput"><button type="button" class="btn btn-info btn-xs valButton" ng-click="addValueBool = true; newValue.status = 'Not Translated'">Add Value</button></div>
+                                </ul>
+                            </form>
+                            <form class="simple-form newAssetForm" ng-show="addValueBool">
+                                <div class="formInput">Value String: <input type="text" ng-model="newValue.string"/></div>
+                                <div class="formInput">Value Status: <input type="radio" ng-model="newValue.status" name="valuestatus" value="Not Translated" checked="true"/> Not Translated
+                                                <input type="radio" ng-model="newValue.status" name="valuestatus" value="Translated"/> Translated
+                                                <input type="radio" ng-model="newValue.status" name="valuestatus" value="In Progress"/> In Progress<br/></div>
+                                <div class="formInput">Locale Code:  <input type="text" ng-model="newValue.locale_code"/></div>
+                                <div class="formInput">Created By:   <input type="text" ng-model="newValue.created_by"/></div>
+                            </form>                
+                        <div class="formInputButton"><button ng-show="createAssetBool" class="btn btn-primary btn-xs" ng-disabled="!validAsset(newAsset) || !validValue(newValue)" ng-click="createNewAsset(newAsset, newValue)">Save</button>
+                        <button ng-show="createAssetBool" class="btn btn-danger btn-xs"  ng-click="resetNewAsset(newAsset)">Cancel</button></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="mainTable">
-             <table id="table1" ng-table="tableParams" class="table">
-                <tr ng-repeat="asset in data.assets | filter:filteredText | limitTo:rowLimit">
-                    <td class="tableCell" data-title="'Key'">
-                        <span ng-show="!editAsset" class="tableValue">{{asset.name}}</span>
-                        <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
-                    </td>
+            <div class="mainTable">
+                 <table id="table1" ng-table="tableParams" class="table">
+                    <tr ng-repeat="asset in data.assets | filter:filteredText | limitTo:rowLimit">
+                        <td class="tableCell" data-title="'Key'">
+                            <span ng-show="!editAsset" class="tableValue">{{asset.name}}</span>
+                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
+                        </td>
 
-                    <td class="tableCell" data-title="'Status'" >
-                        <span ng-show="!editAsset" class="tableValue">{{asset.status}}</span>
-                        <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.status" /></div>
-                    </td>
+                        <td class="tableCell" data-title="'Status'" >
+                            <span ng-show="!editAsset" class="tableValue">{{asset.status}}</span>
+                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.status" /></div>
+                        </td>
 
-                    <td class="tableCell" data-title="'String'">
-                        <div id="valueCell" ng-repeat="value in asset.values">
-                            <span ng-show="!editAsset" class="tableValue">{{value.string}}</span>
-                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="value.string" /></div>
-                        </div>
-                    </td>
+                        <td class="tableCell" data-title="'String'">
+                            <div id="valueCell" ng-repeat="value in asset.values">
+                                <span ng-show="!editAsset" class="tableValue">{{value.string}}</span>
+                                <div ng-show="editAsset"><input class="form-control" type="text" ng-model="value.string" /></div>
+                            </div>
+                        </td>
 
-                    <td class="tableCell" data-title="'Tags'">
-                        <span ng-show="!editAsset" class="tableValue">{{asset.tags}}</span>
-                        <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.tags"/></div>
-                    </td>
+                        <td class="tableCell" data-title="'Tags'">
+                            <span ng-show="!editAsset" class="tableValue">{{asset.tags}}</span>
+                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.tags"/></div>
+                        </td>
 
-                    <td class="tableCell" data-title="'Actions'" class="tableValue">
-                        <div class="icons">
-                            <button type="button" class="toolButton" ng-show="!editAsset" ng-click="editAsset=true"><span class="glyphicon glyphicon-edit cellGlyphicon" style="vertical-align:middle"></span></button>
-                            <a ng-show="editAsset" href="" class="btn btn-default btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
-                            <button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign blue cellGlyphicon" style="vertical-align:middle"></span></button>
-                            <button type="button" class="toolButton" ng-click="deleteAsset(asset)"><span class="glyphicon glyphicon-trash red cellGlyphicon" style="vertical-align:middle"></span></button>
-                            <button id="checkBoxButton" ng-click="addAssetToList(asset)"><input type="checkbox" id="checkBox" style="text-align:center"></button>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                        <td class="tableCell" data-title="'Actions'" class="tableValue">
+                            <div class="icons">
+                                <button type="button" class="toolButton" ng-show="!editAsset" ng-click="editAsset=true"><span class="glyphicon glyphicon-edit cellGlyphicon" style="vertical-align:middle"></span></button>
+                                <a ng-show="editAsset" href="" class="btn btn-default btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
+                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign blue cellGlyphicon" style="vertical-align:middle"></span></button>
+                                <button type="button" class="toolButton" ng-click="deleteAsset(asset)"><span class="glyphicon glyphicon-trash red cellGlyphicon" style="vertical-align:middle"></span></button>
+                                <span id="checkBoxButton" ng-click="addAssetToList(asset)"><input type="checkbox" id="checkBox" style="text-align:center"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </bod>
     </div>
     <div id="footer">
         <div class="footerTitle">
-            <img src="/assetLib/img/icons/blackApple.png" class="imgTitle">
-            <p class="footerText">iConfigurator2.0</p>
+            <img src="/assetLib/img/icons/Workspace.png" class="imgTitle">
+            <p>Workspace.</p>
         </div>
     </div>
 </div>
