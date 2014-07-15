@@ -61,6 +61,10 @@ body {
 	width: 100%;
 	background: white;
 	font-weight: bold;
+	-webkit-box-shadow: 0px 0px 10px #000000;
+	-moz-box-shadow: 0px 0px 10px #000000;
+	-ms-box-shadow: 0px 0px 10px #000000;
+	-o-box-shadow: 0px 0px 10px #000000;
 	box-shadow: 0px 0px 10px #000000;
 	z-index: 15;
 }
@@ -117,6 +121,7 @@ body {
 	font-family: 'Myriad Set', sans-serif;
 	text-align: center;
 	font-weight: 200;
+	font-color: #000000;
 }
 
 #navCenter img {
@@ -181,6 +186,10 @@ body {
     z-index: 12;
     border: 3px solid black;
     background-color: #00007f;
+    -webkit-box-shadow: 0px 0px 4px #000000;
+	-moz-box-shadow: 0px 0px 4px #000000;
+	-ms-box-shadow: 0px 0px 4px #000000;
+	-o-box-shadow: 0px 0px 4px #000000;
     box-shadow: 0px 0px 4px #000000;
 }
 
@@ -239,6 +248,10 @@ body {
 	border-left: 2px solid;
 	border-top: 2px solid;
 	background-color: #fff;
+	-webkit-box-shadow: 2px 2px 4px #000000;
+	-moz-box-shadow: 2px 2px 4px #000000;
+	-ms-box-shadow: 2px 2px 4px #000000;
+	-o-box-shadow: 2px 2px 4px #000000;
 	box-shadow: 2px 2px 4px #000000;
 	z-index: 10;
 }
@@ -278,6 +291,10 @@ body {
 	font-size: 1.2em;
 	font-weight: bold;
 	z-index: 8;
+	-webkit-box-shadow: 0px 0px 4px #000000;
+	-moz-box-shadow: 0px 0px 4px #000000;
+	-ms-box-shadow: 0px 0px 4px #000000;
+	-o-box-shadow: 0px 0px 4px #000000;
 	box-shadow: 0px 0px 4px #000000;
 }
 
@@ -295,6 +312,10 @@ body {
 	margin-left: -1px;
 	background-color: #fcfcfc;
 	z-index: 5;
+	-webkit-box-shadow: 0px 0px 4px #000000;
+	-moz-box-shadow: 0px 0px 4px #000000;
+	-ms-box-shadow: 0px 0px 4px #000000;
+	-o-box-shadow: 0px 0px 4px #000000;
 	box-shadow: 0px 0px 4px #000000;
 }
 
@@ -359,6 +380,10 @@ body {
 	float: left;
 	z-index: 15;
 	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 6px #000000;
+	-moz-box-shadow: 0px 0px 6px #000000;
+	-ms-box-shadow: 0px 0px 6px #000000;
+	-o-box-shadow: 0px 0px 6px #000000;
 	box-shadow: 0px 0px 6px #000000;
 }
 

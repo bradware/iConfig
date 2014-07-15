@@ -29,10 +29,11 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                 };
 
                 $scope.deleteManyAssets = function() {
-                    console.log('Called deleteManyAssets');
+                    console.log('Calling deleteManyAssets');
                     if($scope.assetList.length === 0) {
                         console.log('AssetList is Empty');
-                    } else {
+                    } 
+                    else {
                         for(var asset in $scope.assetList) {
                             $scope.deleteAsset(asset);
                         }
