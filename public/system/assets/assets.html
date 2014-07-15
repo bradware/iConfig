@@ -63,14 +63,7 @@
             </div>
         </div>
         <div class="mainTable">
-             <table id="table2" ng-table="tableParams" class="table">
-                <thead>
-                    <th>Name</th>
-                    <th>Status</th>
-                    <th>String</th>
-                    <th>Tags</th>
-                    <th>Actions</th>
-                </thead>
+             <table id="table1" ng-table="tableParams" class="table">
                 <tr ng-repeat="asset in data.assets | filter:filteredText | limitTo:rowLimit">
                     <td class="tableCell" data-title="'Key'">
                         <span ng-show="!editAsset" class="tableValue">{{asset.name}}</span>
