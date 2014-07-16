@@ -128,9 +128,13 @@ body {
 	font-color: #000000;
 }
 
+#iconfigText {
+	margin-left: 5px;
+}
+
 #navCenter img {
-	width: 35px;
-	height: 28px;
+	width: 26px;	/*35 */
+	height: 30px;	/* 28 */
 	margin-bottom: 7px;
 }
 
