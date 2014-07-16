@@ -1,8 +1,9 @@
 <div ng-app="assetsMod">
     <div class="assettoolbar">
         <div id="navLeft">
-            <p class="navBarLeftItem glyphicon glyphicon-user"></p>
-            <p class="navBarLeftItem glyphicon glyphicon-question-sign blue"></p>       
+            <p class="navBarLeftItem"><a href="#/apps"><button type="button" class="toolButton black"><span class="glyphicon         
+                glyphicon-home"></button></span></a></p>
+            <p class="navBarLeftItem glyphicon glyphicon-question-sign glyphBlue"></p>       
             <p class="navBarLeftItem navBarTextItem">Mark As</p>
             <p class="navBarLeftItem navBarTextItem">Display</p> 
             <p class="navBarLeftItem navBarTextItem">Translation Status</p> 
@@ -14,7 +15,7 @@
         </div>
         <div id="navRight">
             <p class="navBarRightItem"><span class="glyphicon glyphicon-off red"></span></p>
-            <p class="navBarRightItem"><a href="#/apps"><button type="button" class="toolButton black"><span class="glyphicon glyphicon-home"></button></span></a></p>  
+            <p class="navBarRightItem glyphicon glyphicon-user"></p>  
             <p class="navBarRightItem navBarTextItem">Application</p> 
             <p class="navBarRightItem navBarTextItem">Target Language</p>
             <p class="navBarRightItem navBarTextItem">Version</p>    
@@ -28,16 +29,33 @@
                 </div>
                 <div class="tableToolBar-icons">
                         <ul id="toolBarMenu">
-                            <li><button type="button" class="toolButton" ng-click="createAssetBool = !createAssetBool; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus white"></span></button></li>
-                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-question-sign white"></span></button></li>     
-                            <li><button type="button" class="toolButton" ng-click="deleteManyAssets()"><span class="glyphicon glyphicon-trash white"></span></button></li>
-                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign white"></span></button></li>
-                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-upload white"></span></button></li>
-                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-edit white"></span></button></li>      
-                            <li><button type="button" class="toolButton"><span class="glyphicon glyphicon-globe white"></span></button></li>
-                            <li><button type="button" class="toolButton" ng-click="search = !search"><span class="glyphicon glyphicon-search white"></span></button></li>
-                            <li><input class="filters" type="text" ng-show="search" ng-model="filteredText" placeholder="Search"/></li>
-                            <li><input class="filters" type="text" ng-show="search" ng-model="rowLimit" placeholder="Rows per Page"/></li>
+                            <li>
+                                <button type="button" class="toolButton" ng-click="createAssetBool = !createAssetBool; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus white"></span></button></li>
+                            <li>
+                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-edit white"></span></button>
+                            </li>
+                            <li>
+                                <button type="button" class="toolButton" ng-click="deleteManyAssets()"><span class="glyphicon   
+                                    glyphicon-trash white"></span></button></li> 
+                            <li>
+                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-upload white"></span></button>
+                            </li>
+                            <li>
+                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-download white"></span></button>
+                            </li>
+                            <li>
+                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-globe white"></span></button>
+                            </li>
+                            <li>
+                                <button type="button" class="toolButton" ng-click="search = !search">
+                                    <span class="glyphicon glyphicon-search white"></span></button>
+                            </li>
+                            <li>
+                                <input class="filters" type="text" ng-show="search" ng-model="filteredText" placeholder="Search"/>
+                            </li>
+                            <li>
+                                <input class="filters" type="text" ng-show="search" ng-model="rowLimit" placeholder="Rows per Page"/>
+                            </li>
                         </ul>
                     <div class="newAsset" ng-model="newAsset" ng-show="createAssetBool">
                             <form class="simple-form newAssetForm">
@@ -65,7 +83,7 @@
             </div>
             <div class="mainTable">
                  <table id="table1" ng-table="tableParams" class="table">
-                    <tr ng-repeat="asset in data.assets | filter:filteredText | limitTo:rowLimit">
+                    <tr ng-repeat="asset in data.assets | filter:filteredText |  limitTo:rowLimit">
                         <td class="tableCell" data-title="'Key'">
                             <span ng-show="!editAsset" class="tableValue">{{asset.name}}</span>
                             <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
@@ -88,13 +106,13 @@
                             <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.tags"/></div>
                         </td>
 
-                        <td class="tableCell" data-title="'Actions'" class="tableValue">
+                        <td class="tableCell" data-title="'Actions'" class="tableValue" ng-model="asset">
                             <div class="icons">
                                 <button type="button" class="toolButton" ng-show="!editAsset" ng-click="editAsset=true"><span class="glyphicon glyphicon-edit cellGlyphicon" style="vertical-align:middle"></span></button>
-                                <a ng-show="editAsset" href="" class="btn btn-default btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
-                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign blue cellGlyphicon" style="vertical-align:middle"></span></button>
+                                    <a ng-show="editAsset" href="" class="btn btn-primary btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
+                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign glyphBlue cellGlyphicon" style="vertical-align:middle"></span></button>
                                 <button type="button" class="toolButton" ng-click="deleteAsset(asset)"><span class="glyphicon glyphicon-trash red cellGlyphicon" style="vertical-align:middle"></span></button>
-                                <span id="checkBoxButton" ng-click="addAssetToList(asset)"><input type="checkbox" id="checkBox" style="text-align:center"></span>
+                                <span id="checkBoxButton" ng-click="updateAssetList(asset)"><input type="checkbox" id="checkBox" style="text-align:center"></span>
                             </div>
                         </td>
                     </tr>

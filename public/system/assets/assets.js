@@ -2,7 +2,7 @@
 angular.module('assetsMod', ['ngResource', 'ngTable'])
         .controller('assetsCtrl', ['$scope', 'ngTableParams', '$sce', '$http', '$resource', '$filter',
             function($scope, ngTableParams, $sce, $http, $resource, $filter) {
-                $scope.assetResource = $resource('http://localhost:3000/apps/53b06ea66d79fb15f51f2b8c/assets/:asset_id', { asset_id: '@_id' }, 
+                $scope.assetResource = $resource('/apps/53b06ea66d79fb15f51f2b8c/assets/:asset_id', { asset_id: '@_id' }, 
                 {
                     create: { method: 'POST'},
                     update: { method: 'PUT' }
@@ -23,21 +23,25 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                     });
                 };
 
-                $scope.addAssetToList = function(asset) {
-                    $scope.assetList.unshift(asset);
-                    console.log($scope.assetList);
+                $scope.updateAssetList = function(asset) {
+                    if ($scope.assetList.indexOf(asset) === -1) {
+                        $scope.assetList.unshift(asset);
+                    }
+                    else {
+                        $scope.assetList.splice($scope.assetList.indexOf(asset), 1);
+                    }
                 };
 
                 $scope.deleteManyAssets = function() {
-                    console.log('Calling deleteManyAssets');
                     if($scope.assetList.length === 0) {
                         console.log('AssetList is Empty');
                     } 
                     else {
-                        for(var asset in $scope.assetList) {
-                            $scope.deleteAsset(asset);
+                        for(var index = 0; index < $scope.assetList.length; index++) {
+                            $scope.deleteAsset($scope.assetList[index]);
                         }
                     }
+                    $scope.totalAssets = $scope.totalAssets - $scope.assetList.length;
                     $scope.assetList = [ ];
                 };
 

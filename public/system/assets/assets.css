@@ -3,6 +3,10 @@
     color: blue;
 }
 
+.glyphBlue {
+	color: #2727d8;
+}
+
 .red {
     color: red;
 }
@@ -22,7 +26,7 @@
 }
 
 body {
-	background-color: #e0e0e0; 
+	background-color: #efefef; /* #ececec */
 }
 
 .assettoolbar {
@@ -61,11 +65,11 @@ body {
 	width: 100%;
 	background: white;
 	font-weight: bold;
-	-webkit-box-shadow: 0px 0px 10px #000000;
-	-moz-box-shadow: 0px 0px 10px #000000;
-	-ms-box-shadow: 0px 0px 10px #000000;
-	-o-box-shadow: 0px 0px 10px #000000;
-	box-shadow: 0px 0px 10px #000000;
+	-webkit-box-shadow: 0px 0px 8px #c0c0c0;
+	-moz-box-shadow: 0px 0px 8px #c0c0c0;
+	-ms-box-shadow: 0px 0px 8px #c0c0c0;
+	-o-box-shadow: 0px 0px 8px #c0c0c0;
+	box-shadow: 0px 0px 8px #c0c0c0;
 	z-index: 15;
 }
 
@@ -143,7 +147,7 @@ body {
 	-o-flex-shrink: 1;
 	flex-shrink: 1;
 
-	margin-right: 5px;
+	margin-right: 0px;
 
 }
 
@@ -179,24 +183,24 @@ body {
 	flex-wrap: wrap;
 
 	position: fixed;
-	top: 65px;
+	top: 50px;
     width: 96%;
     left: 2%;
     right: 2%;
     z-index: 12;
-    border: 3px solid black;
-    background-color: #00007f;
-    -webkit-box-shadow: 0px 0px 4px #000000;
-	-moz-box-shadow: 0px 0px 4px #000000;
-	-ms-box-shadow: 0px 0px 4px #000000;
-	-o-box-shadow: 0px 0px 4px #000000;
-    box-shadow: 0px 0px 4px #000000;
+    border: 1px solid #c0c0c0;
+    background-color: #435481;
+    -webkit-box-shadow: 0px 0px 8px #c0c0c0;
+	-moz-box-shadow: 0px 0px 8px #c0c0c0;
+	-ms-box-shadow: 0px 0px 8px #c0c0c0;
+	-o-box-shadow: 0px 0px 8px #c0c0c0;
+    box-shadow: 0px 0px 8px #c0c0c0;
 }
 
 #tableToolbar-appName  {
 	width: 105px;
-	border-right: 2px solid black;
-	background-color: #fcfcfc;
+	border-right: 1px solid #ffffff;
+	background-color: #ffffff; /*#fcfcfc*/
 }
 
 .tableToolbar-title {
@@ -240,27 +244,24 @@ body {
 
 .newAsset {
 	display: block;
-	margin-left: 33px;
+	margin-left: 35px;
 	margin-top: 40px;
 	margin-bottom: 5px;
-	border-bottom: 2px solid;
-	border-right: 2px solid;
-	border-left: 2px solid;
-	border-top: 2px solid;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
 	background-color: #fff;
 	-webkit-box-shadow: 2px 2px 4px #000000;
 	-moz-box-shadow: 2px 2px 4px #000000;
 	-ms-box-shadow: 2px 2px 4px #000000;
 	-o-box-shadow: 2px 2px 4px #000000;
-	box-shadow: 2px 2px 4px #000000;
+	box-shadow: 1px 1px 2px #000000;
 	z-index: 10;
 }
 
 .newAssetForm {
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
+	padding-top: 5px;
+	margin: 10px;
 	list-style: none;
 	margin-right: 20px;
 }
@@ -277,25 +278,28 @@ body {
 .mainTable {
 	position: fixed;
 	width: 96%;
-	top: 114px;
+	top: 96px;
     left: 2%;
     right: 2%;
 }
 
+#table1 {
+	-webkit-box-shadow: 0px 0px 8px #c0c0c0;
+	-moz-box-shadow: 0px 0px 8px #c0c0c0;
+	-ms-box-shadow: 0px 0px 8px #c0c0c0;
+	-o-box-shadow: 0px 0px 8px #c0c0c0;
+	box-shadow: 0px 0px 8px #c0c0c0;
+	z-index: 8;
+}
+
 #table1 thead {
-	border-top: none;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
 	width: 100%;
-	border-left: 3px solid;
-	border-right: 3px solid;
-	background-color: #95a5b1;
+	background-color: #b2b7bc;
 	font-size: 1.2em;
 	font-weight: bold;
 	z-index: 8;
-	-webkit-box-shadow: 0px 0px 4px #000000;
-	-moz-box-shadow: 0px 0px 4px #000000;
-	-ms-box-shadow: 0px 0px 4px #000000;
-	-o-box-shadow: 0px 0px 4px #000000;
-	box-shadow: 0px 0px 4px #000000;
 }
 
 #table1 th {
@@ -304,26 +308,30 @@ body {
 
 #table1 tbody{
 	position: fixed;
-	border: 3px solid black;
-	top: 152px;
+	border-top: 1px solid #c0c0c0;
+	border-left: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	top: 137px;
 	overflow-y: scroll;
-	height: 75%;
+	height: 76.5%;  /* 76.5% */
 	width: 96%;
-	margin-left: -1px;
-	background-color: #fcfcfc;
+	margin-left: -0.5px;  /* THIS IS NECESSARY */
+	background-color: #ffffff;   /* #fcfcfc; */
 	z-index: 5;
-	-webkit-box-shadow: 0px 0px 4px #000000;
-	-moz-box-shadow: 0px 0px 4px #000000;
-	-ms-box-shadow: 0px 0px 4px #000000;
-	-o-box-shadow: 0px 0px 4px #000000;
-	box-shadow: 0px 0px 4px #000000;
+	-webkit-box-shadow: 0px 0px 8px #c0c0c0;
+	-moz-box-shadow: 0px 0px 8px #c0c0c0;
+	-ms-box-shadow: 0px 0px 8px #c0c0c0;
+	-o-box-shadow: 0px 0px 8px #c0c0c0;
+	box-shadow: 0px 0px 8px #c0c0c0;
+
 }
 
 .tableCell {
 	width: 10%;
 	text-align: center;
-	border-bottom: 1px solid;
-	border-right: 1px solid;
+	border-top: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
 	z-index: 5;
 }
 
@@ -380,11 +388,11 @@ body {
 	float: left;
 	z-index: 15;
 	background-color: #fff;
-	-webkit-box-shadow: 0px 0px 6px #000000;
-	-moz-box-shadow: 0px 0px 6px #000000;
-	-ms-box-shadow: 0px 0px 6px #000000;
-	-o-box-shadow: 0px 0px 6px #000000;
-	box-shadow: 0px 0px 6px #000000;
+	-webkit-box-shadow: 0px 0px 8px #c0c0c0;
+	-moz-box-shadow: 0px 0px 8px #c0c0c0;
+	-ms-box-shadow: 0px 0px 8px #c0c0c0;
+	-o-box-shadow: 0px 0px 8px #c0c0c0;
+	box-shadow: 0px 0px 8px #c0c0c0;
 }
 
 .footerTitle img{
