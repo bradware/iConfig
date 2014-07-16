@@ -32,6 +32,12 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                     }
                 };
 
+                $scope.updateManyAssets = function() {
+                    for(var index = 0; index < $scope.assetList.length; index++) {
+                        $scope.assetList[index].editThisAsset = true;
+                    }
+                };
+
                 $scope.deleteManyAssets = function() {
                     if($scope.assetList.length === 0) {
                         console.log('AssetList is Empty');
@@ -54,6 +60,7 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
 
                 $scope.saveAsset = function (asset) {
                     asset.$update();
+                    asset.editThisAsset = false;
                 };
 
                 $scope.isEmpty = function (obj) {

@@ -4,7 +4,7 @@
 }
 
 .glyphBlue {
-	color: #2727d8;
+	color: #1f1fad;
 }
 
 .red {
@@ -64,7 +64,8 @@ body {
 	height: 38px;
 	width: 100%;
 	background: white;
-	font-weight: bold;
+	font-weight: 400;
+	font-family: 'Helvetica', sans-serif;
 	-webkit-box-shadow: 0px 0px 8px #c0c0c0;
 	-moz-box-shadow: 0px 0px 8px #c0c0c0;
 	-ms-box-shadow: 0px 0px 8px #c0c0c0;
@@ -211,9 +212,10 @@ body {
 	position: relative;
 	margin-top: 10px;
 	margin-bottom: 0;
-	font-size: 200%;
+	font-size: 175%;
+	text-
 	font-weight: 300;
-	font-family: 'Myriad Set', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	color: #000000;
 }
 
@@ -255,10 +257,10 @@ body {
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;
 	background-color: #fff;
-	-webkit-box-shadow: 2px 2px 4px #000000;
-	-moz-box-shadow: 2px 2px 4px #000000;
-	-ms-box-shadow: 2px 2px 4px #000000;
-	-o-box-shadow: 2px 2px 4px #000000;
+	-webkit-box-shadow: 1px 1px 2px #000000;
+	-moz-box-shadow: 1px 1px 2px #000000;
+	-ms-box-shadow: 1px 1px 2px #000000;
+	-o-box-shadow: 1px 1px 2px #000000;
 	box-shadow: 1px 1px 2px #000000;
 	z-index: 10;
 }
@@ -300,23 +302,25 @@ body {
 	border-left: 1px solid #c0c0c0;
 	border-right: 1px solid #c0c0c0;
 	width: 100%;
-	background-color: #b2b7bc;
-	font-size: 1.2em;
-	font-weight: bold;
+	background-color: #c7cbce;  /* #b2b7bc; */
 	z-index: 8;
 }
 
 #table1 th {
 	width: 20%;
+	font-weight: normal;
+	font-size: 1.1em;
+	font-family: 'Helvetica', sans-serif;
 }
 
 #table1 tbody{
 	position: fixed;
+	font-family: 'Helvetica', sans-serif;
 	border-top: 1px solid #c0c0c0;
 	border-left: 1px solid #c0c0c0;
 	border-bottom: 1px solid #c0c0c0;
 	border-right: 1px solid #c0c0c0;
-	top: 137px;
+	top: 136px;
 	overflow-y: scroll;
 	height: 76.5%;  /* 76.5% */
 	width: 96%;

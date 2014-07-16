@@ -32,7 +32,7 @@
                             <li>
                                 <button type="button" class="toolButton" ng-click="createAssetBool = !createAssetBool; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus white"></span></button></li>
                             <li>
-                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-edit white"></span></button>
+                                <button type="button" class="toolButton" ng-click="updateManyAssets()" ng-model="assetList"><span class="glyphicon glyphicon-edit white"></span></button>
                             </li>
                             <li>
                                 <button type="button" class="toolButton" ng-click="deleteManyAssets()"><span class="glyphicon   
@@ -108,10 +108,17 @@
 
                         <td class="tableCell" data-title="'Actions'" class="tableValue" ng-model="asset">
                             <div class="icons">
-                                <button type="button" class="toolButton" ng-show="!editAsset" ng-click="editAsset=true"><span class="glyphicon glyphicon-edit cellGlyphicon" style="vertical-align:middle"></span></button>
-                                    <a ng-show="editAsset" href="" class="btn btn-primary btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
-                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-info-sign  cellGlyphicon" style="vertical-align:middle"></span></button>
-                                <button type="button" class="toolButton" ng-click="deleteAsset(asset)"><span class="glyphicon glyphicon-trash red cellGlyphicon" style="vertical-align:middle"></span></button>
+                                <button type="button" class="toolButton" ng-show="!editAsset" ng-click="editAsset=true">
+                                    <span class="glyphicon glyphicon-edit cellGlyphicon" style="vertical-align:middle"></span>
+                                </button>
+                                    <a ng-show="editAsset || asset.editThisAsset" href="" class="btn btn-primary btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
+                                <button type="button" class="toolButton" ng-click="deleteAsset(asset)">
+                                    <span class="glyphicon glyphicon-trash red cellGlyphicon" style="vertical-align:middle"></span>
+                                </button>
+                                <button type="button" class="toolButton">
+                                    <span class="glyphicon glyphicon-info-sign cellGlyphicon glyphBlue" style="vertical-align:middle">
+                                    </span>
+                                </button>
                                 <span id="checkBoxButton" ng-click="updateAssetList(asset)"><input type="checkbox" id="checkBox" style="text-align:center"></span>
                             </div>
                         </td>
