@@ -22,7 +22,7 @@
         </div>
     </div>
     <div ng-controller="assetsCtrl">
-        <body>
+        <div class="assetBody">
             <div class="tableToolbar">
                 <div id="tableToolbar-appName">
                     <h3 class="tableToolBar-title"><img src="assetLib/img/icons/iLog.png">iLog</h3>
@@ -32,7 +32,7 @@
                             <li>
                                 <button type="button" class="toolButton" ng-click="createAssetBool = !createAssetBool; newAsset.status = 'Not Translated'"><span class="glyphicon glyphicon-plus white"></span></button></li>
                             <li>
-                                <button type="button" class="toolButton" ng-click="updateManyAssets()" ng-model="assetList"><span class="glyphicon glyphicon-edit white"></span></button>
+                                <button type="button" class="toolButton"><span class="glyphicon glyphicon-edit white"></span></button>
                             </li>
                             <li>
                                 <button type="button" class="toolButton" ng-click="deleteManyAssets()"><span class="glyphicon   
@@ -84,35 +84,35 @@
             <div class="mainTable">
                  <table id="table1" ng-table="tableParams" class="table">
                     <tr ng-repeat="asset in data.assets | filter:filteredText |  limitTo:rowLimit">
-                        <td class="tableCell" data-title="'Key'">
+                        <td class="tableCell animate fadeOutUp" data-title="'Key'">
                             <span ng-show="!editAsset" class="tableValue">{{asset.name}}</span>
                             <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
                         </td>
 
-                        <td class="tableCell" data-title="'Status'" >
+                        <td class="tableCell animate fadeOutUp" data-title="'Status'" >
                             <span ng-show="!editAsset" class="tableValue">{{asset.status}}</span>
                             <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.status" /></div>
                         </td>
 
-                        <td class="tableCell" data-title="'String'">
+                        <td class="tableCell animate fadeOutUp" data-title="'String'">
                             <div id="valueCell" ng-repeat="value in asset.values">
                                 <span ng-show="!editAsset" class="tableValue">{{value.string}}</span>
                                 <div ng-show="editAsset"><input class="form-control" type="text" ng-model="value.string" /></div>
                             </div>
                         </td>
 
-                        <td class="tableCell" data-title="'Tags'">
+                        <td class="tableCell animate fadeOutUp" data-title="'Tags'">
                             <span ng-show="!editAsset" class="tableValue">{{asset.tags}}</span>
                             <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.tags"/></div>
                         </td>
 
-                        <td class="tableCell" data-title="'Actions'" class="tableValue" ng-model="asset">
+                        <td class="tableCell animate fadeOutUp" data-title="'Actions'" class="tableValue" ng-model="asset">
                             <div class="icons">
                                 <button type="button" class="toolButton" ng-show="!editAsset" ng-click="editAsset=true">
                                     <span class="glyphicon glyphicon-edit cellGlyphicon" style="vertical-align:middle"></span>
                                 </button>
                                     <a ng-show="editAsset || asset.editThisAsset" href="" class="btn btn-primary btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
-                                <button type="button" class="toolButton" ng-click="deleteAsset(asset)">
+                                <button type="button" class="toolButton" ng-click="deleteAsset(asset, false)">
                                     <span class="glyphicon glyphicon-trash red cellGlyphicon" style="vertical-align:middle"></span>
                                 </button>
                                 <button type="button" class="toolButton">
@@ -125,7 +125,7 @@
                     </tr>
                 </table>
             </div>
-        </bod>
+        </div>
     </div>
     <div id="footer">
         <div class="footerTitle">

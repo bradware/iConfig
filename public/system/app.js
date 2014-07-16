@@ -8,7 +8,7 @@ angular.module('myApp', ['ui.router', 'ngTable', 'assetsMod', 'ngResource'])
             $stateProvider              
                 .state('home', {
                     url: '/apps',
-                    templateUrl: '/index.html'
+                    templateUrl: '/apps/apps.html'
                 })          
                 .state('workspace', {
                     url: '/assets',

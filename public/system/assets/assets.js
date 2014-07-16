@@ -32,30 +32,36 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                     }
                 };
 
-                $scope.updateManyAssets = function() {
-                    for(var index = 0; index < $scope.assetList.length; index++) {
-                        $scope.assetList[index].editThisAsset = true;
-                    }
-                };
-
                 $scope.deleteManyAssets = function() {
                     if($scope.assetList.length === 0) {
                         console.log('AssetList is Empty');
                     } 
                     else {
                         for(var index = 0; index < $scope.assetList.length; index++) {
-                            $scope.deleteAsset($scope.assetList[index]);
+                            $scope.deleteAsset($scope.assetList[index], true);
                         }
                     }
                     $scope.totalAssets = $scope.totalAssets - $scope.assetList.length;
                     $scope.assetList = [ ];
                 };
 
-                $scope.deleteAsset = function (asset) {
-                    asset.$delete().then(function() {
-                        $scope.data.assets.splice($scope.data.assets.indexOf(asset), 1);
-                        $scope.totalAssets -= 1;
-                    });
+                $scope.deleteAsset = function (asset, calledFromParent) {
+                    if(calledFromParent) {
+                        asset.$delete().then(function() {
+                            $scope.data.assets.splice($scope.data.assets.indexOf(asset), 1);
+                            $scope.totalAssets -= 1;
+                        });
+                    } 
+                    else {
+                        event.srcElement.className = 'assetDeleted';
+                        event.srcElement.parentElement.parentElement.parentElement.parentElement.className = 'animated fadeOutUp';
+                        setTimeout(function() {
+                        asset.$delete().then(function() {
+                                $scope.data.assets.splice($scope.data.assets.indexOf(asset), 1);
+                                $scope.totalAssets -= 1;
+                        });
+                        }, 500);
+                    }   
                 };
 
                 $scope.saveAsset = function (asset) {
