@@ -7,6 +7,6 @@ angular.module('appsMod', [ ])
                 $scope.dropdownClicked = function() {
                     event.stopPropagation();
                     $scope.showDropdown = !$scope.showDropdown;
-                }
+                };
             }
         ]);
