@@ -53,7 +53,7 @@
 	-ms-flex-shrink: 1;
 	-o-flex-shrink: 1;
 	flex-shrink: 1;
-	margin-top: 8px;
+	margin-top: 6px;
 	margin-right: 15px;
 }
 
@@ -70,7 +70,7 @@
 	-o-flex-shrink: 1;
 	flex-shrink: 1;
 	margin-top: 5px;
-	margin-right: 5px;
+	margin-right: 0px;
 }
 
 .profileNavBar p {
@@ -147,7 +147,7 @@
 
 .question {
 	position: fixed;
-	top: 8px;
+	top: 6px;
 	right: -10px;
 	width: 50px;
 	height: 55px;
