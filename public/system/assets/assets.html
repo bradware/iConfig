@@ -90,7 +90,7 @@
                         </td>
                         <td class="tableCell descriptionCell" data-title="'Description'">
                             <span ng-show="!editAsset" class="tableValue">{{asset.description}}</span>
-                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
+                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.description"/></div>
                         </td>
                         <td class="tableCell" data-title="'US English'">
                             <div id="valueCell" ng-repeat="value in getEnglishValues(asset)">

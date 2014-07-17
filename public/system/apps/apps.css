@@ -8,6 +8,18 @@
 	height: 100%;
 }
 
+.toolBar {
+	height: 38px;
+	width: 100%;
+	background: #ffffff;
+	z-index: 12;
+	-webkit-box-shadow: 0px 0px 8px #c0c0c0;
+	-moz-box-shadow: 0px 0px 8px #c0c0c0;
+	-ms-box-shadow: 0px 0px 8px #c0c0c0;
+	-o-box-shadow: 0px 0px 8px #c0c0c0;
+	box-shadow: 0px 0px 8px #c0c0c0;
+}
+
 .navBar {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -34,29 +46,12 @@
 	flex-wrap: wrap;
 
 	position: fixed;
-	height: 55px;
-	width: 390px;
+	height: 38px;
+	width: 300px;
 	z-index: 15;
 	margin-left: 10px;
 
 }
-
-.logoutNavBar {
-	-webkit-flex-grow: 1;
-	-moz-flex-grow: 1;
-	-ms-flex-grow: 1;
-	-o-flex-grow: 1;
-	flex-grow: 1;
-
-	-webkit-flex-shrink: 1;
-	-moz-flex-shrink: 1;
-	-ms-flex-shrink: 1;
-	-o-flex-shrink: 1;
-	flex-shrink: 1;
-	margin-top: 6px;
-	margin-right: 15px;
-}
-
 .profileNavBar {
 	-webkit-flex-grow: 1;
 	-moz-flex-grow: 1;
@@ -69,15 +64,15 @@
 	-ms-flex-shrink: 1;
 	-o-flex-shrink: 1;
 	flex-shrink: 1;
-	margin-top: 5px;
-	margin-right: 0px;
+	margin-top: 6px;
+	margin-left: 5px;
 }
 
 .profileNavBar p {
 	display: inline-block;
 	font-family: 'Helvetica', sans-serif;
 	text-align: inline-block;
-	font-size: .6em;
+	font-size: 16px;
 	color: #000000;
 	font-weight: 300;
 	margin-left: 5px;
@@ -96,31 +91,32 @@
 	-o-flex-shrink: 1;
 	flex-shrink: 1;
 	margin-top: 5px;
-	margin-right: 8px;
+	margin-left: 5px;
 }
 
 .workspaceNavBar img {
 	width: 30px;
 	height: 30px;
-	margin-top: -15px;
+	margin-top: -14px;
 }
 
 .workspaceNavBar p {
 	display: inline-block;
 	font-family: 'Helvetica', sans-serif;
 	text-align: inline-block;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 300;
 	margin-top: 4px;
-	margin-left: -3px;
+	margin-left: -10px;
 }
 
 .workspaceNavBar button {
 	background: transparent;
 	border: none;
 	box-shadow: none;
-	text-align: center;
-	vertical-align: center;
+	text-align: left;
+	width: 132px;
+	height: 32px;
 }
 
 .workspaceNavBar button:hover {
@@ -145,20 +141,30 @@
 	background-color: #dedede;
 }
 
-.question {
+.logout {
 	position: fixed;
-	top: 6px;
+	top: 8px;
 	right: -10px;
 	width: 50px;
 	height: 55px;
+	z-index: 15;
+}
+
+.question {
+	position: fixed;
+	top: 8px;
+	right: 30px;
+	width: 50px;
+	height: 55px;
+	z-index: 15;
 }
 
 .title {
-	position: absolute;
+	position: fixed;
 	left: 35%;
 	right: 35%;
 	width: 30%;
-	top: 30%;
+	top: 28%;
 	text-align: center;
 	vertical-align: center;
 
@@ -212,7 +218,7 @@
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
-	height: 26px;
+	height: 28px;
 	font-weight: 300;
 	text-align: center;
 	font-size: 1.0em;
@@ -229,7 +235,7 @@
 
 .footer img {
 	margin-top: 2px;
-	width: 20px;
-	height: 20px;
+	width: 22px;
+	height: 22px;
 }
 
