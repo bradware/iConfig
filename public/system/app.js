@@ -1,5 +1,5 @@
 'use strict';
-angular.module('myApp', ['ui.router', 'ngTable', 'assetsMod', 'ngResource'])
+angular.module('myApp', ['ui.router', 'ngTable', 'assetsMod', 'appsMod', 'ngResource'])
     //routing for the main module
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
             // For unmatched routes:

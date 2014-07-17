@@ -1,6 +1,6 @@
 <div ng-app="appsMod">
-    <div class="appsBody">
-        <div class="navBar" ng-model="showDropdown">
+    <div class="appsBody" ng-click="showDropdown = false">
+        <div class="navBar">
                     <div class="logoutNavBar">
                         <span class="glyphicon glyphicon-off red" style="font-size: 25px"></span>
                     </div>
@@ -10,7 +10,7 @@
                     <div class="workspaceNavBar">
                         <div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" 
-                                ng-click="showDropdown = !showDropdown">
+                                ng-click="dropdownClicked()">
                                 <span><a href="#/assets"><img src="/assetLib/img/icons/workspaceLamp.png"></a><p>Workspace</p></span><span class=
                                     "caret"></span>
                             </button>
@@ -32,10 +32,10 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="questionNavBar">
+                    </div>    
+        </div>
+        <div class="question">
                         <span class="glyphicon glyphicon-question-sign glyphBlue" style="font-size: 23px"></span>
-                    </div>
         </div>
         <div class="title">
             <p>
