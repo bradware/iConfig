@@ -23,6 +23,27 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                     });
                 };
 
+                $scope.getEnglishValues = function(asset) {
+                    var englishValues = [ ];
+                    for(var index = 0; index < asset.values.length; index++) {
+                        if(asset.values[index].locale_code === 'en_US') {
+                            englishValues.push(asset.values[index]);
+                        }
+                    }
+                    return englishValues;
+                };
+
+                $scope.getSpanishValues = function(asset) {
+                    var spanishValues = [ ];
+                    for(var index = 0; index < asset.values.length; index++) {
+                        if(asset.values[index].locale_code === 'es_ES') {
+                            spanishValues.push(asset.values[index]);
+                        }
+                    }
+                    return spanishValues;
+                };
+
+
                 $scope.updateAssetList = function(asset) {
                     if ($scope.assetList.indexOf(asset) === -1) {
                         $scope.assetList.unshift(asset);

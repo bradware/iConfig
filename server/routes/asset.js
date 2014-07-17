@@ -26,6 +26,7 @@ router.route('/:app_id/assets')
 		newAsset.name = req.body.name;
 		newAsset.status = req.body.status;
 		newAsset.app_id = req.params.app_id;
+		newAsset.description = req.body.description;
 		if(!req.body.tags) {
 			newAsset.tags = [ ];
 		} 

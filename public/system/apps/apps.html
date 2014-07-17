@@ -1,38 +1,53 @@
-<div class="appsBody">
-    <div class="navBar">
-                <div class="logoutNavBar">
-                    <span class="glyphicon glyphicon-off red" style="font-size: 30px"></span>
-                </div>
-                <div class="profileNavBar">
-                    <span class="glyphicon glyphicon-user" style="font-size: 30px"><p>Hello, <u>Brad Ware</u></p></span>
-                </div>
-                <div class="workspaceNavBar">
-                     <span><a href="#/assets" style="color: #000000">
-                        <img src="/assetLib/img/icons/Workspace.png"><p id="workspaceText">Workspace</p>
-                     </a></span>
-                </div>
-                <div class="questionNavBar">
-                    <span class="glyphicon glyphicon-question-sign glyphBlue" style="font-size: 30px"></span>
-                </div>
-    </div>
-    <div class="title">
-        <p>
-            <span><img src="/assetLib/img/icons/rainbowApple.png"><span id="iconfigText">iConfigurator2.0</span></span>
-        </p>
-        <div class="mission">
-            <p>Coming soon to a monitor near you.</p>
+<div ng-app="appsMod">
+    <div class="appsBody">
+        <div class="navBar" ng-model="showDropdown">
+                    <div class="logoutNavBar">
+                        <span class="glyphicon glyphicon-off red" style="font-size: 25px"></span>
+                    </div>
+                    <div class="profileNavBar">
+                        <span class="glyphicon glyphicon-user" style="font-size: 25px"><p>Hello, <u>Brad Ware</u></p></span>
+                    </div>
+                    <div class="workspaceNavBar">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" 
+                                ng-click="showDropdown = !showDropdown">
+                                <span><a href="#/assets"><img src="/assetLib/img/icons/workspaceLamp.png"></a><p>Workspace</p></span><span class=
+                                    "caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" ng-show="showDropdown">
+                                <li><span><a href="#">
+                                    <p>Contact Apple Support</p></a></span>
+                                </li>
+                                <li><span><a href="#">
+                                    <p>iLog</p></a></span>
+                                </li>
+                                <li><span><a href="#/assets">
+                                    <p>PaymentPortal</p></a></span>
+                                </li>
+                                <li><span><a href="#">
+                                    <p>MobileGenius</p></a></span>
+                                </li>
+                                <li><span><a href="#">
+                                    <p>Enterprise</p></a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="questionNavBar">
+                        <span class="glyphicon glyphicon-question-sign glyphBlue" style="font-size: 23px"></span>
+                    </div>
         </div>
-    </div>
+        <div class="title">
+            <p>
+                <span><img src="/assetLib/img/icons/rainbowApple.png"><span id="iconfigText">iConfigurator2.0</span></span>
+            </p>
+            <div class="mission">
+                <p>Coming soon to a monitor near you.</p>
+            </div>
+        </div>
 
-    <div class="footer">
-        <div id="Mangesh">
-            <p>Mangesh Gondhalekar</p>
-        </div>
-        <div id="Brad">
-            <p>Brad Ware</p>
-        </div>
-        <div id="Yashan">
-            <p>Yashan Dand</p>
+        <div class="footer">
+                <img src="/assetLib/img/icons/greyApple.png">
         </div>
     </div>
 </div>

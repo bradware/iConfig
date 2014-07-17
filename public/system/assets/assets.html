@@ -25,7 +25,7 @@
         <div class="assetBody">
             <div class="tableToolbar">
                 <div id="tableToolbar-appName">
-                    <h3 class="tableToolBar-title"><img src="assetLib/img/icons/iLog.png">iLog</h3>
+                    <h3 class="tableToolBar-title"><img src="assetLib/img/icons/applecare.png">PaymentPortal</h3>
                 </div>
                 <div class="tableToolBar-icons">
                         <ul id="toolBarMenu">
@@ -60,13 +60,13 @@
                     <div class="newAsset" ng-model="newAsset" ng-show="createAssetBool">
                             <form class="simple-form newAssetForm">
                                 <div class="formInput">Asset Name: <input type="text" ng-model="newAsset.name" required/></div>
+                                <div class="formInput">Asset Description: <input type="text" ng-model="newAsset.description" required/></div>
                                 <div class="formInput">Asset Status: <input type="radio" ng-model="newAsset.status" name="assetstatus" value    ="Not Translated" checked="true"/> Not Translated
                                     <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Translated" /> Translated
                                     <input type="radio" ng-model="newAsset.status" name="assetstatus" value="In Progress"/> In Progress</div>
                                 <div class="formInput">Asset Tags: <input type="text" ng-model="newAsset.tags"/></div>
                                 <div class="formInput">Created By: <input type="text" ng-model="newAsset.created_by"/></div>
-                                <div class="formInput"><button type="button" class="btn btn-info btn-xs valButton" ng-click="addValueBool = true; newValue.status = 'Not Translated'">Add Value</button></div>
-                                </ul>
+                                <button type="button" class="formInput toolButton addValue" ng-click="addValueBool = !addValueBool; newValue.status = 'Not Translated'"><span class="glyphicon glyphicon-plus"></span>Add Value</button>
                             </form>
                             <form class="simple-form newAssetForm" ng-show="addValueBool">
                                 <div class="formInput">Value String: <input type="text" ng-model="newValue.string"/></div>
@@ -84,29 +84,33 @@
             <div class="mainTable">
                  <table id="table1" ng-table="tableParams" class="table">
                     <tr ng-repeat="asset in data.assets | filter:filteredText |  limitTo:rowLimit">
-                        <td class="tableCell animate fadeOutUp" data-title="'Key'">
+                        <td class="tableCell" data-title="'Key'">
                             <span ng-show="!editAsset" class="tableValue">{{asset.name}}</span>
                             <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
                         </td>
-
-                        <td class="tableCell animate fadeOutUp" data-title="'Status'" >
-                            <span ng-show="!editAsset" class="tableValue">{{asset.status}}</span>
-                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.status" /></div>
+                        <td class="tableCell descriptionCell" data-title="'Description'">
+                            <span ng-show="!editAsset" class="tableValue">{{asset.description}}</span>
+                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
                         </td>
-
-                        <td class="tableCell animate fadeOutUp" data-title="'String'">
-                            <div id="valueCell" ng-repeat="value in asset.values">
+                        <td class="tableCell" data-title="'US English'">
+                            <div id="valueCell" ng-repeat="value in getEnglishValues(asset)">
+                                <span ng-show="!editAsset" class="tableValue">{{value.string}}</span>
+                                <div ng-show="editAsset"><input class="form-control" type="text" ng-model="value.string" /></div>
+                            </div>
+                        </td>
+                        <td class="tableCell" data-title="'Spanish'">
+                            <div id="valueCell" ng-repeat="value in getSpanishValues(asset)">
                                 <span ng-show="!editAsset" class="tableValue">{{value.string}}</span>
                                 <div ng-show="editAsset"><input class="form-control" type="text" ng-model="value.string" /></div>
                             </div>
                         </td>
 
-                        <td class="tableCell animate fadeOutUp" data-title="'Tags'">
-                            <span ng-show="!editAsset" class="tableValue">{{asset.tags}}</span>
-                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.tags"/></div>
+                        <td class="tableCell" data-title="'Status'" >
+                            <span ng-show="!editAsset" class="tableValue">{{asset.status}}</span>
+                            <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.status" /></div>
                         </td>
 
-                        <td class="tableCell animate fadeOutUp" data-title="'Actions'" class="tableValue" ng-model="asset">
+                        <td class="actionsCell" data-title="'Actions'" class="tableValue" ng-model="asset">
                             <div class="icons">
                                 <button type="button" class="toolButton" ng-show="!editAsset" ng-click="editAsset=true">
                                     <span class="glyphicon glyphicon-edit cellGlyphicon" style="vertical-align:middle"></span>
@@ -129,8 +133,8 @@
     </div>
     <div id="footer">
         <div class="footerTitle">
-            <img src="/assetLib/img/icons/Workspace.png" class="imgTitle">
-            <p>Workspace.</p>
+            <img src="/assetLib/img/icons/workspaceLamp.png">
+            <p>Workspace</p>
         </div>
     </div>
 </div>

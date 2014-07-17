@@ -12,6 +12,7 @@ var assetSchema = mongoose.Schema({
 		app_id: {type: mongoose.Schema.Types.ObjectId, ref: 'ClientApp', required: true },
 
 		tags: [String],	
+		description: String,
 		project_id: {type: mongoose.Schema.Types.ObjectId, ref: 'Project' },
 		created_by: { type: String, required: true },			//This will eventualy be changed to a user_id for a User object - outside the scope of my implementation
 		created_date: { type: Date, default: Date.now, required: true},
