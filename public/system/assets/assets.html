@@ -1,7 +1,7 @@
 <div ng-app="assetsMod">
     <div class="assettoolbar">
         <div id="navLeft">
-            <p class="navBarLeftItem"><a href="#/apps"><button type="button" class="toolButton black"><span class="glyphicon         
+            <p class="navBarLeftItem navBarHome"><a href="#/apps"><button type="button" class="toolButton black"><span class="glyphicon         
                 glyphicon-home"></button></span></a></p>
             <p class="navBarLeftItem glyphicon glyphicon-user"></p>  
             <p class="navBarLeftItem navBarTextItem">Mark As</p>
@@ -14,8 +14,8 @@
             </p>
         </div>
         <div id="navRight">
-            <p class="navBarRightItem"><span class="glyphicon glyphicon-off red"></span></p>
-            <p class="navBarRightItem glyphicon glyphicon-question-sign glyphBlue"></p>  
+            <p class="navBarRightItem"><i class="fa fa-power-off red" style="font-size: 25px"></i></p>
+            <p class="navBarRightItem"><i class="fa fa-question-circle glyphBlue" style="font-size: 25px"></i></p>  
             <p class="navBarRightItem navBarTextItem">Application</p> 
             <p class="navBarRightItem navBarTextItem">Target Language</p>
             <p class="navBarRightItem navBarTextItem">Version</p>    
@@ -120,8 +120,7 @@
                                     <span class="glyphicon glyphicon-trash red cellGlyphicon" style="vertical-align:middle"></span>
                                 </button>
                                 <button type="button" class="toolButton">
-                                    <span class="glyphicon glyphicon-info-sign cellGlyphicon glyphBlue" style="vertical-align:middle">
-                                    </span>
+                                    <i class="fa fa-info-circle glyphBlue" style="font-size:16px; vertical-align:middle"></i> 
                                 </button>
                                 <span id="checkBoxButton" ng-click="updateAssetList(asset)"><input type="checkbox" id="checkBox" style="text-align:center"></span>
                             </div>

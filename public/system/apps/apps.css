@@ -64,7 +64,7 @@
 	-ms-flex-shrink: 1;
 	-o-flex-shrink: 1;
 	flex-shrink: 1;
-	margin-top: 6px;
+	margin-top: 8px;
 	margin-left: 5px;
 }
 
@@ -144,18 +144,20 @@
 .logout {
 	position: fixed;
 	top: 8px;
-	right: -10px;
+	right: -8px;
 	width: 50px;
 	height: 55px;
+	font-size: 28px;
 	z-index: 15;
 }
 
 .question {
 	position: fixed;
 	top: 8px;
-	right: 30px;
+	right: 35px;
 	width: 50px;
 	height: 55px;
+	font-size: 28px;
 	z-index: 15;
 }
 
