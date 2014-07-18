@@ -1,8 +1,9 @@
 'use strict';
+
 angular.module('assetsMod', ['ngResource', 'ngTable'])
         .controller('assetsCtrl', ['$scope', 'ngTableParams', '$sce', '$http', '$resource', '$filter',
             function($scope, ngTableParams, $sce, $http, $resource, $filter) {
-                $scope.assetResource = $resource('/apps/53b06ea66d79fb15f51f2b8c/assets/:asset_id', { asset_id: '@_id' }, 
+                $scope.assetResource = $resource('/apps/53c9542826d6fc0000774b7f/assets/:asset_id', { asset_id: '@_id' }, 
                 {
                     create: { method: 'POST'},
                     update: { method: 'PUT' }
@@ -19,7 +20,7 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                 $scope.getAssets = function () {
                     $scope.data.assets = $scope.assetResource.query(function() {
                         $scope.totalAssets = $scope.data.assets.length;
-                        $scope.rowLimit = 100;
+                        $scope.rowLimit = 15;
                     });
                 };
 

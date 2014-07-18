@@ -1,10 +1,5 @@
 var	mongoose = require('mongoose');
-//var express = require('express');
-//var	bodyParser = require('body-parser');
-//var ClientApp = require('../models/clientApp');
-//var	port = process.env.PORT || 3000;
-//var	router = express.Router();
-//var	app = express();
+
 
 var assetSchema = mongoose.Schema({
 		name: { type: String, required: true },
@@ -27,6 +22,5 @@ var assetSchema = mongoose.Schema({
 		} ]
 });
 
-//assetSchema.index({app_id: 1, name: 1, status: -1, tags: -1 });
 var Asset = mongoose.model('Asset', assetSchema, 'Asset'); 	//3rd argument is collection
 module.exports = Asset;

@@ -1,9 +1,5 @@
 var	mongoose = require('mongoose');
-//var express = require('express');
-//var	bodyParser = require('body-parser');
-//var	port = process.env.PORT || 3000;
-//var	router = express.Router();
-//var	app = express();
+
 
 
 var clientAppSchema = mongoose.Schema({

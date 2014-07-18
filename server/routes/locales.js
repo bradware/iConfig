@@ -1,6 +1,5 @@
 'use strict';
 
-///var AssetValue = require('../models/assetValue');
 var ClientApp = require('../models/clientApp');
 var router = require('express').Router();
 

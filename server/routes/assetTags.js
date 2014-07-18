@@ -2,8 +2,7 @@
 
 var Asset = require('../models/asset');
 var router = require('express').Router();
-//var mongoose = require('mongoose');
-//var ClientApp = require('../models/clientApp');
+
 
 router.route('/:app_id/tags')
 	.get(function(req, res, next) {

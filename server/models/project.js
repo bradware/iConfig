@@ -1,7 +1,6 @@
 'use strict';
 var	mongoose = require('mongoose');
 
-//var statusStates = ['Translated', 'Not Translated', 'In Progress'];
 var projectSchema = mongoose.Schema({
 	name: { type: String, required: true },
 	description: { type: String, required: true },
@@ -16,6 +15,5 @@ var projectSchema = mongoose.Schema({
 	assets: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Asset' } ]
 });
 
-//projectSchema.index({ app_id: 1, name: 1, status: -1, tags: -1 });
 var Project = mongoose.model('Project', projectSchema, 'Project'); 	//3rd argument is collection
 module.exports = Project;

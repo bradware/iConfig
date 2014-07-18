@@ -358,7 +358,7 @@
 	font-size: 0.9em;
 	border-top: 1px solid #c0c0c0;
 	border-right: 1px solid #c0c0c0;
-	border-bottom: 1px solid #c0c0c0;	/* ERASE LATER******  */
+	border-bottom: 1px solid #c0c0c0;
 	z-index: 5;
 	height: 30px;
 }
@@ -368,7 +368,7 @@
 	text-align: center;
 	font-size: 0.9em;
 	border-top: 1px solid #c0c0c0;
-	border-bottom: 1px solid #c0c0c0;	/* ERASE LATER******  */
+	border-bottom: 1px solid #c0c0c0;
 	z-index: 5;
 	height: 30px;
 }

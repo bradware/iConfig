@@ -3,8 +3,7 @@
 var util = require('../../utility');
 var router = require('express').Router();
 var ClientApp = require('../models/clientApp');
-//var mongoose = require('mongoose');
-//var AssetKey = require('../models/assetKey');
+
 
 
 router.route('/')
