@@ -1,3 +1,4 @@
+'use strict';
 var	mongoose = require('mongoose');
 
 
@@ -22,5 +23,13 @@ var assetSchema = mongoose.Schema({
 		} ]
 });
 
+assetSchema.index({ name: 1, app_id: -1 });
+assetSchema.set('autoIndex', false);
 var Asset = mongoose.model('Asset', assetSchema, 'Asset'); 	//3rd argument is collection
+Asset.ensureIndexes(function (err) {
+	  if (err) {
+	  	console.log('Error in indexing Asset Collection');
+	  }
+});
+
 module.exports = Asset;

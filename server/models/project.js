@@ -15,5 +15,15 @@ var projectSchema = mongoose.Schema({
 	assets: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Asset' } ]
 });
 
+
+
+projectSchema.index({ name: 1, assets: -1 });
+projectSchema.set('autoIndex', false);
 var Project = mongoose.model('Project', projectSchema, 'Project'); 	//3rd argument is collection
+Project.ensureIndexes(function (err) {
+	  if (err) {
+	  	console.log('Error in indexing Project Collection');
+	  }
+});
+
 module.exports = Project;

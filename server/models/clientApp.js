@@ -1,3 +1,4 @@
+'use strict';
 var	mongoose = require('mongoose');
 
 
@@ -14,5 +15,14 @@ var clientAppSchema = mongoose.Schema({
 
 });
 
+
+clientAppSchema.index({ name: 1 });
+clientAppSchema.set('autoIndex', false);
 var ClientApp = mongoose.model('ClientApp', clientAppSchema, 'ClientApp'); 	//3rd argument is collection
+ClientApp.ensureIndexes(function (err) {
+	  if (err) {
+	  	console.log('Error in indexing ClientApp Collection');
+	  }
+});
+
 module.exports = ClientApp;
