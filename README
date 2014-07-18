@@ -27,6 +27,8 @@ $ npm install -g grunt-cli
 
   Download my repository from Git:
 
+    $ cd to/preferred/directory/
+    $ git init
     $ git pull git@gitlab.sd.apple.com:bware/iconfigurator2-0.git
     $ cd ./iconfigurator2-0 
     $ npm install
@@ -38,11 +40,12 @@ $ npm install -g grunt-cli
 
   Alternatively, when not using `grunt` you can run:
 
+    $ mongod --dbpath /YourPathTo/iconfigurator2-0/data/db/
     $ node server
-    $ mongod --dbpath /YourPathToiconfigurator2-0/data/db/
 
   Then, open a browser and go to:
 
-    http://localhost:3000/index.html
+    http://localhost:3000/index.html    OR
+    http://localhost:3000/#/apps
 
 BOOM. You are now permitted to enter the top-secret project iConfigurator2.0! Proceed with caution.
