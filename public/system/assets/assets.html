@@ -66,8 +66,8 @@
                         </ul>
                     <div class="newAsset" ng-model="newAsset" ng-show="createAssetBool">
                             <form class="simple-form newAssetForm">
-                                <div class="formInput">Asset Name: <input type="text" ng-model="newAsset.name" required/></div>
-                                <div class="formInput">Asset Description: <input type="text" ng-model="newAsset.description" required/></div>
+                                <div class="formInput">Asset Name: <input type="text" ng-model="newAsset.name"/></div>
+                                <div class="formInput">Asset Description: <input type="text" ng-model="newAsset.description"/></div>
                                 <div class="formInput">Asset Status: <input type="radio" ng-model="newAsset.status" name="assetstatus" value    ="Not Translated" checked="true"/> Not Translated
                                     <input type="radio" ng-model="newAsset.status" name="assetstatus" value="Translated" /> Translated
                                     <input type="radio" ng-model="newAsset.status" name="assetstatus" value="In Progress"/> In Progress</div>
