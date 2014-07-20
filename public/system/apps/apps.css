@@ -120,7 +120,16 @@
 }
 
 .workspaceNavBar button:hover {
-	background-color: transparent;
+	background: transparent;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; /* future proofing */
+	-khtml-border-radius: 5px; /* for old Konqueror browsers */
+	-webkit-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-moz-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-ms-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-o-box-shadow: inset 0px 0px 10px #e0e0e0;
+	box-shadow: inset 0px 0px 10px #e0e0e0;
 }
 
 .dropdown-menu {

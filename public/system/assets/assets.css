@@ -256,6 +256,30 @@
 	border: none;
 }
 
+.navBarHome button:active {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; /* future proofing */
+	-khtml-border-radius: 5px; /* for old Konqueror browsers */
+	-webkit-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-moz-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-ms-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-o-box-shadow: inset 0px 0px 10px #e0e0e0;
+	box-shadow: inset 0px 0px 10px #e0e0e0;
+}
+
+.navBarHome button:hover {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; /* future proofing */
+	-khtml-border-radius: 5px; /* for old Konqueror browsers */
+	-webkit-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-moz-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-ms-box-shadow: inset 0px 0px 10px #e0e0e0;
+	-o-box-shadow: inset 0px 0px 10px #e0e0e0;
+	box-shadow: inset 0px 0px 10px #e0e0e0;
+}
+
 .newAsset {
 	display: block;
 	margin-left: 35px;
@@ -301,7 +325,7 @@
 .mainTable {
 	position: fixed;
 	width: 96%;
-	top: 96px;
+	top: 94px;
     left: 2%;
     right: 2%;
 }
@@ -326,7 +350,7 @@
 #table1 th {
 	width: 16.66%;
 	font-weight: normal;
-	font-size: 1.1em;
+	font-size: 1.0em;
 	font-family: 'Helvetica', sans-serif;
 }
 
@@ -337,9 +361,9 @@
 	border-left: 1px solid #c0c0c0;
 	border-bottom: 1px solid #c0c0c0;
 	border-right: 1px solid #c0c0c0;
-	top: 136px;
+	top: 132px;
 	overflow-y: scroll;
-	height: 76.5%;  /* 76.5% */
+	height: 77.5%;  /* 76.5% */
 	width: 96%;
 	margin-left: -0.5px;  /* THIS IS NECESSARY */
 	background-color: #ffffff;   /* #fcfcfc; */
@@ -355,12 +379,12 @@
 .tableCell {
 	width: 6%;  /* 10% */
 	text-align: center;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	border-top: 1px solid #c0c0c0;
 	border-right: 1px solid #c0c0c0;
 	border-bottom: 1px solid #c0c0c0;
 	z-index: 5;
-	height: 30px;
+	height: 0px;
 }
 
 .actionsCell {
@@ -370,12 +394,32 @@
 	border-top: 1px solid #c0c0c0;
 	border-bottom: 1px solid #c0c0c0;
 	z-index: 5;
-	height: 30px;
+	height: 0px;
 }
 
 .filters {
 	margin-left: 15px;
 	border: 1px solid black;
+	width: 120px;
+	height: 25px;
+	vertical-align: center;
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	-ms-border-radius: 4px; 
+	-o-border-radius: 4px;
+	border-radius: 4px;
+
+
+}
+
+.dropdown {
+	margin-left: 10px;
+	margin-top: 0px;
+	width: 105px;
+	height: 25px;
+	font-family: 'Helvetica', sans-serif;
+	border: 1px solid black;
+	background-color: #ffffff;
 }
 
 #checkBoxButton {

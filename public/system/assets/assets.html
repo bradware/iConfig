@@ -1,8 +1,7 @@
 <div ng-app="assetsMod">
     <div class="assettoolbar">
         <div id="navLeft">
-            <p class="navBarLeftItem navBarHome"><a href="#/apps"><button type="button" class="toolButton black"><span class="glyphicon         
-                glyphicon-home"></button></span></a></p>
+            <p class="navBarLeftItem navBarHome"><a href="#/apps"><button id="homeButton"type="button" class="toolButton black"><span class="glyphicon glyphicon-home"></button></span></a></p>
             <p class="navBarLeftItem glyphicon glyphicon-user"></p>  
             <p class="navBarLeftItem navBarTextItem">Mark As</p>
             <p class="navBarLeftItem navBarTextItem">Display</p> 
@@ -54,7 +53,15 @@
                                 <input class="filters" type="text" ng-show="search" ng-model="filteredText" placeholder="Search"/>
                             </li>
                             <li>
-                                <input class="filters" type="text" ng-show="search" ng-model="rowLimit" placeholder="Rows per Page"/>
+                                <select class="dropdown" ng-model="rowLimit" ng-show="search">
+                                  <option disabled="disabled">Display Row Amount</option>
+                                  <option value="10">10 rows</option>
+                                  <option value="50">50 rows</option>
+                                  <option value="100">100 rows</option>
+                                  <option value="500">500 rows</option>
+                                  <option value="500">500 rows</option>
+                                  <option value="1000">1,000 rows</option>
+                                </select>
                             </li>
                         </ul>
                     <div class="newAsset" ng-model="newAsset" ng-show="createAssetBool">
