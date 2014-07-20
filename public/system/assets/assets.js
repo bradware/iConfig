@@ -17,6 +17,7 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                 $scope.addValueBool = false;
                 $scope.assetList = [ ];
 
+
                 $scope.getAssets = function () {
                     $scope.data.assets = $scope.assetResource.query(function() {
                         $scope.totalAssets = $scope.data.assets.length;
