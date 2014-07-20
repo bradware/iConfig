@@ -399,8 +399,8 @@
 
 .filters {
 	margin-left: 15px;
-	border: 1px solid black;
-	width: 120px;
+	border: 1px solid #c0c0c0;
+	width: 130px;
 	height: 25px;
 	vertical-align: center;
 	-webkit-border-radius: 4px; 
@@ -408,17 +408,15 @@
 	-ms-border-radius: 4px; 
 	-o-border-radius: 4px;
 	border-radius: 4px;
-
-
+	background-color: #ffffff;
 }
 
 .dropdown {
 	margin-left: 10px;
-	margin-top: 0px;
 	width: 105px;
 	height: 25px;
 	font-family: 'Helvetica', sans-serif;
-	border: 1px solid black;
+	border: 1px solid #c0c0c0;	
 	background-color: #ffffff;
 }
 
