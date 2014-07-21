@@ -214,6 +214,7 @@
 #tableToolbar-appName  {
 	width: 220px;
 	background-color: #ffffff; /*#fcfcfc*/
+	border-right: 1px solid #ffffff;
 }
 
 .tableToolbar-title {
@@ -419,6 +420,10 @@
 	font-family: 'Helvetica', sans-serif;
 	border: 1px solid #c0c0c0;	
 	background-color: #ffffff;
+	-webkit-background-color: #ffffff;
+	-moz-background-color: #ffffff;
+	-ms-background-color: #ffffff;
+	-o-background-color: #ffffff;
 }
 
 #checkBoxButton {
