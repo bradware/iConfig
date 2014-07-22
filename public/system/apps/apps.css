@@ -64,18 +64,20 @@
 	-ms-flex-shrink: 1;
 	-o-flex-shrink: 1;
 	flex-shrink: 1;
-	margin-top: 8px;
+	margin-top: 5px;
 	margin-left: 5px;
 }
 
-.profileNavBar p {
+#profileNavBarText {
 	display: inline-block;
 	font-family: 'Helvetica', sans-serif;
-	text-align: inline-block;
+	position: relative;
 	font-size: 16px;
-	color: #000000;
 	font-weight: 300;
-	margin-left: 5px;
+	top: -3px;
+	color: #000000;
+	margin-left: 8px;
+	
 }
 
 .workspaceNavBar {
@@ -97,7 +99,8 @@
 .workspaceNavBar img {
 	width: 30px;
 	height: 30px;
-	margin-top: -14px;
+	margin-top: -10px;
+	margin-left: -5px;
 }
 
 .workspaceNavBar p {
@@ -106,8 +109,9 @@
 	text-align: inline-block;
 	font-size: 16px;
 	font-weight: 300;
-	margin-top: 4px;
-	margin-left: -10px;
+	position: relative;
+	margin-top: 5px;
+	margin-left: -3px;
 }
 
 .workspaceNavBar button {
@@ -115,8 +119,7 @@
 	border: none;
 	box-shadow: none;
 	text-align: left;
-	width: 132px;
-	height: 32px;
+	margin-top: -5px;
 }
 
 .workspaceNavBar button:hover {
@@ -152,8 +155,8 @@
 
 .logout {
 	position: fixed;
-	top: 8px;
-	right: -8px;
+	top: 6px;
+	right: 0px;
 	width: 50px;
 	height: 55px;
 	font-size: 28px;
@@ -162,8 +165,8 @@
 
 .question {
 	position: fixed;
-	top: 8px;
-	right: 35px;
+	top: 6px;
+	right: 65px;
 	width: 50px;
 	height: 55px;
 	font-size: 28px;

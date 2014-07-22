@@ -18,7 +18,7 @@
 	color: #ffffff;
 }
 .glyphicon {
-	font-size: 1.6em;
+	font-size: 23px;
 }
 
 .cellGlyphicon{ 
@@ -66,8 +66,9 @@
 	height: 38px;
 	width: 100%;
 	background: white;
-	font-weight: 400;
 	font-family: 'Helvetica', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
 	-webkit-box-shadow: 0px 0px 8px #c0c0c0;
 	-moz-box-shadow: 0px 0px 8px #c0c0c0;
 	-ms-box-shadow: 0px 0px 8px #c0c0c0;
@@ -95,7 +96,7 @@
 .navBarLeftItem {
 	float: left;
 	margin-right: 15px;
-	margin-bottom: 2px;
+	margin-bottom: 10px;
 }
 
 .navBarHome {
@@ -105,11 +106,11 @@
 .navBarRightItem {
 	float: right;
 	margin-right: 15px;
-	margin-bottom: 2px;
+	margin-bottom: 10px;
 }
 
 .navBarTextItem {
-	margin-top: 5px;
+	margin-top: 3px;
 	font-size: 16px;
 }
 
@@ -144,7 +145,7 @@
 #navCenter img {
 	width: 27.78px;	/*35 */
 	height: 30px;	/* 28 */
-	margin-bottom: 6px;
+	margin-bottom: 10px;
 }
 
 #navRight {
@@ -159,7 +160,6 @@
 	-ms-flex-shrink: 1;
 	-o-flex-shrink: 1;
 	flex-shrink: 1;
-
 	margin-right: 0px;
 
 }
@@ -286,15 +286,13 @@
 	margin-left: 35px;
 	margin-top: 40px;
 	margin-bottom: 5px;
-	border-left: 1px solid #000000;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid #000000;
+	border: 1px solid rgba(0,0,0,.15);
 	background-color: #fff;
-	-webkit-box-shadow: 0px 0px 2px #000000;
-	-moz-box-shadow: 0px 0px 2px #000000;
-	-ms-box-shadow: 0px 0px 2px #000000;
-	-o-box-shadow: 0px 0px 2px #000000;
-	box-shadow: 0px 0px 2px #000000;
+	-webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.172549);
+	-moz-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.172549);
+	-ms-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.172549);
+	-o-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.172549);
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.172549);
 	z-index: 10;
 }
 
@@ -354,6 +352,11 @@
 	font-weight: normal;
 	font-size: 1.0em;
 	font-family: 'Helvetica', sans-serif;
+}
+
+#table1 tr:nth-child(even) {
+	background-color: #fafafa;
+;
 }
 
 #table1 tbody{
@@ -493,5 +496,5 @@
 	margin-top: 4px;
 	line-height: 25px;
 	font-weight: 300;
-	margin-left: -7px;
+	margin-left: -3px;
 }
