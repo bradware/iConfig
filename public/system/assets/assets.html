@@ -1,7 +1,7 @@
 <div ng-app="assetsMod">
     <div class="assettoolbar">
         <div id="navLeft">
-            <p class="navBarLeftItem navBarHome"><a href="#/apps"><button id="homeButton"type="button" class="toolButton black"><span class="glyphicon glyphicon-home"></button></span></a></p>
+            <p class="navBarLeftItem navBarHome"><a href="#/apps"><button id="homeButton" type="button" class="toolButton black"><span class="glyphicon glyphicon-home"></button></span></a></p>
             <p class="navBarLeftItem glyphicon glyphicon-user"></p>  
             <p class="navBarLeftItem navBarLeftTextItem">Mark As</p>
             <p class="navBarLeftItem navBarLeftTextItem">Display</p> 
@@ -13,8 +13,8 @@
             </p>
         </div>
         <div id="navRight">
-            <p class="navBarRightItem"><i class="fa fa-power-off red" style="font-size: 25px"></i></p>
-            <p class="navBarRightItem"><i class="fa fa-question-circle glyphBlue" style="font-size: 25px"></i></p>  
+            <p class="navBarRightItem logoutImg"><img src="/assetLib/img/icons/logout_black.png"></p>
+            <p class="navBarRightItem questionImg"><img src="/assetLib/img/icons/question_blue.png"></p>  
             <p class="navBarRightItem navBarRightTextItem">Application</p> 
             <p class="navBarRightItem navBarRightTextItem">Target Language</p>
             <p class="navBarRightItem navBarRightTextItem">Version</p>    
@@ -90,7 +90,7 @@
             <div class="mainTable">
                  <table id="table1" ng-table="tableParams" class="table">
                     <tr ng-repeat="asset in data.assets | filter:filteredText |  limitTo:rowLimit">
-                        <td class="tableCell" data-title="'Key'">
+                        <td class="tableCell keyCell" data-title="'Key'">
                             <span ng-show="!editAsset" class="tableValue">{{asset.name}}</span>
                             <div ng-show="editAsset"><input class="form-control" type="text" ng-model="asset.name"/></div>
                         </td>
@@ -119,14 +119,14 @@
                         <td class="actionsCell" data-title="'Actions'" class="tableValue" ng-model="asset">
                             <div class="icons">
                                 <button type="button" class="toolButton" ng-show="!editAsset" ng-click="editAsset=true">
-                                    <span class="glyphicon glyphicon-edit cellGlyphicon" style="vertical-align:middle"></span>
+                                    <span class="glyphicon glyphicon-edit editBlack cellGlyphicon" style="vertical-align:middle"></span>
                                 </button>
                                     <a ng-show="editAsset || asset.editThisAsset" href="" class="btn btn-primary btn-xs" ng-click="saveAsset(asset); editAsset=false">Save</a>
                                 <button type="button" class="toolButton" ng-click="deleteAsset(asset, false)">
-                                    <span class="glyphicon glyphicon-trash red cellGlyphicon" style="vertical-align:middle"></span>
+                                    <span class="glyphicon glyphicon-trash trashRed cellGlyphicon" style="vertical-align:middle"></span>
                                 </button>
-                                <button type="button" class="toolButton">
-                                    <i class="fa fa-info-circle glyphBlue" style="font-size:16px; vertical-align:middle"></i> 
+                                <button type="button" class="tableToolButton">
+                                    <img src="/assetLib/img/icons/info_blue.png">
                                 </button>
                                 <span id="checkBoxButton" ng-click="updateAssetList(asset)"><input type="checkbox" id="checkBox" style="text-align:center"></span>
                             </div>
