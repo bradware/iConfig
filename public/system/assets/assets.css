@@ -401,7 +401,7 @@
 	border-right: 1px solid #c0c0c0;
 	top: 132px;
 	overflow-y: scroll;
-	height: 80%;  /* 76.5% */
+	height: 80.50%;  /* 76.5% */
 	width: 96%;
 	margin-left: -0.5px;  /* THIS IS NECESSARY */
 	background-color: #ffffff;   /* #fcfcfc; */
