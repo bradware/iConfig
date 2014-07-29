@@ -124,7 +124,6 @@ angular.module('assetsMod', ['ngResource', 'ngTable'])
                 };
 
                 $scope.createNewAsset = function(newAsset, newValue) {
-                    console.log(newValue);
                     if(!$scope.isEmpty(newValue)) {
                         newAsset.values = [newValue];
                     }

@@ -42,7 +42,11 @@ router.route('/:app_id/assets')
 		newAsset.last_modified_by = req.body.created_by;
 		if(!req.body.values) {
 			newAsset.values = [ ];
-		} else {
+		} 
+		else if(req.body.values[0].string === undefined) {
+			newAsset.values = [ ];
+		}
+		else {
 			newAsset.values = req.body.values;
 		}
 
