@@ -17,7 +17,7 @@ var assetSchema = mongoose.Schema({
 		values: [ {
 			string: { type: String, required: true},
 			status: { type: String, enum: ['Translated', 'Not Translated', 'In Progress'], required: true },		
-			locale_code: {type: String, required: true},   //THIS NeEDS TO BE VALIDATED WITH CLIENTAPP
+			locale_code: {type: String, required: true},   
 			created_by: { type: String, required: true},			
 			created_date: { type: Date, default: Date.now, required: true}
 		} ]
