@@ -29,9 +29,9 @@ $ npm install -g grunt-cli
 
     $ cd to/preferred/directory/
     $ git init
-    $ git pull https://github.com/bware225/iConfig.git
+    $ git clone https://github.com/bware225/iConfig.git
     $ git add .
-    $ cd ./iconfigurator2-0 
+    $ cd ./iConfig
     $ npm install
     $ grunt
 
