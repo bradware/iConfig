@@ -10,4 +10,7 @@ testem.log
 .idea
 .travis.yml
 .editorconfig
+<<<<<<< HEAD
 /data/db/journal
+=======
+>>>>>>> f89aa15f102f109ce63c70d6c46505d0147ae7ac
