@@ -52,5 +52,4 @@ $ npm install -g grunt-cli
     http://localhost:3000/#/apps
   
   
-
 BOOM. You are now permitted to enter the top-secret project iConfigurator2.0! Proceed with caution.
