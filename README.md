@@ -1,5 +1,7 @@
 Follow these instructions to get iConfigurator2.0 up and running.
 
+This application has also been deployed through heroku https://iconfig.herokuapp.com
+
 ## Prerequisites
 * Node.js - Download and Install [Node.js](http://www.nodejs.org/download/). You can also follow [this gist](https://gist.github.com/isaacs/579814) for a quick and easy way to install Node.js and npm
 * MongoDB - Download and Install [MongoDB](http://docs.mongodb.org/manual/installation/) - Make sure `mongod` is running on the default port (27017).
@@ -49,6 +51,6 @@ $ npm install -g grunt-cli
     http://localhost:3000/index.html    OR
     http://localhost:3000/#/apps
   
-  This application has also been deployed through heroku https://iconfig.herokuapp.com
+  
 
 BOOM. You are now permitted to enter the top-secret project iConfigurator2.0! Proceed with caution.
