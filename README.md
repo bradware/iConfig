@@ -48,5 +48,7 @@ $ npm install -g grunt-cli
 
     http://localhost:3000/index.html    OR
     http://localhost:3000/#/apps
+  
+  This application has also been deployed through heroku https://iconfig.herokuapp.com
 
 BOOM. You are now permitted to enter the top-secret project iConfigurator2.0! Proceed with caution.
