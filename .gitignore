@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/.sass-cache
+*.DS_Store
+npm-debug.log
+testem.log
+.idea
+.travis.yml
+.editorconfig
+/data/db/journal
