@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    db: 'mongodb://localhost/mean-prod',
+    db: 'mongo dogen.mongohq.com:10009/iconfig-db -u bware -p navarre1',
     app: {
         name: 'MEAN - A Modern Stack - Production'
     },
