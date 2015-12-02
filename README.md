@@ -1,3 +1,5 @@
+# iConfigurator
+
 Follow these instructions to get iConfigurator2.0 up and running.
 
 This application has also been deployed through heroku https://iconfig.herokuapp.com
