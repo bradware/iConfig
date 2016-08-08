@@ -27,14 +27,14 @@ $ npm install -g grunt-cli
 
 
 ## Getting My Repository
-  My code is stored on GitHub at the respository address: https://github.com/bware225/iConfig
+  My code is stored on GitHub at the respository address: https://github.com/bradware/iconfigurator
   First, you should have git running on your machine
 
   Download my repository from Git:
 
     $ cd to/preferred/directory/
     $ git init
-    $ git clone https://github.com/bware225/iConfig.git
+    $ git clone https://github.com/bradware/iconfigurator
     $ git add .
     $ cd ./iConfig
     $ npm install
