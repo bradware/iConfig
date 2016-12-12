@@ -1,5 +1,5 @@
 # iConfigurator
-![iConfigurator](https://github.com/bradware/iconfigurator/blob/gh-pages/public/system/assetLib/img/icons/iconfig.png)
+![iConfigurator](https://github.com/bradware/iconfigurator/blob/master/public/system/assetLib/img/icons/iconfig.png)
 
 Follow these instructions to get iConfigurator2.0 up and running.
 
